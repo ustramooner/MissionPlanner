@@ -2020,7 +2020,7 @@ namespace MissionPlanner.Controls
                     base.OnHandleCreated(e);
                 }
             }
-            catch (Exception ex) { log.Error(ex); opengl = false; } // macs fail here
+            catch (Exception ex) { log.Error ("Expected failure on max/linux due to opengl support"); log.Error(ex); opengl = false; } // macs/linux fail here
         }
 
         protected override void OnHandleDestroyed(EventArgs e)
