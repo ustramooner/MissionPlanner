@@ -1,4 +1,4 @@
-﻿////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 //
 //  AssemblyInfo.cs - This file is part of LibVLC.NET.
 //
@@ -39,4 +39,4 @@ using System.Windows;
 [assembly: AssemblyCopyright("Copyright (C) 2011 Boris Richter")]
 [assembly: ComVisible(false)]
 [assembly: Guid("6e2eff7b-e4bd-4145-89a0-223f73cd79fd")]
-[assembly: ThemeInfo(ResourceDictionaryLocation.SourceAssembly, ResourceDictionaryLocation.SourceAssembly)]
+//[assembly: ThemeInfo(ResourceDictionaryLocation.SourceAssembly, ResourceDictionaryLocation.SourceAssembly)]

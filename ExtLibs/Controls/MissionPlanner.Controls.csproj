@@ -49,6 +49,7 @@
     <Reference Include="OpenTK.GLControl">
       <HintPath>..\OpenTK.GLControl.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AGauge.cs">
