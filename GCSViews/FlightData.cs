@@ -16,13 +16,16 @@ using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using log4net;
 using MissionPlanner.Controls;
-using MissionPlanner.Joystick;
 using MissionPlanner.Log;
 using MissionPlanner.Utilities;
 using MissionPlanner.Warnings;
 using OpenTK;
 using ZedGraph;
 using LogAnalyzer = MissionPlanner.Utilities.LogAnalyzer;
+
+#if !noDIRECTX
+using MissionPlanner.Joystick;
+#endif
 
 // written by michael oborne
 
@@ -2277,9 +2280,11 @@ namespace MissionPlanner.GCSViews
 
         private void BUT_joystick_Click(object sender, EventArgs e)
         {
+#if !noDIRECTX
             Form joy = new JoystickSetup();
             ThemeManager.ApplyThemeTo(joy);
             joy.Show();
+#endif
         }
 
         private void CMB_modes_Click(object sender, EventArgs e)
