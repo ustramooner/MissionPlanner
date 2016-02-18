@@ -19,7 +19,7 @@ namespace ArdupilotMega
                 if (!MONO)
                     System.Diagnostics.Process.Start(Application.StartupPath + Path.DirectorySeparatorChar + "MissionPlanner.exe");
                 else
-                    System.Diagnostics.Process.Start("mono MissionPlanner.exe");
+               System.Diagnostics.Process.Start("mono", Application.StartupPath + Path.DirectorySeparatorChar + "MissionPlanner.exe");
             }
             catch (Exception ex) { Console.WriteLine(ex.ToString()); Console.ReadLine(); }
         }
