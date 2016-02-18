@@ -9,8 +9,9 @@ using System.Windows.Forms;
 
 namespace MissionPlanner.Joystick
 {
+   #if !noDIRECTX
     public partial class Joy_Do_Repeat_Relay : Form
-    {
+   {
         public Joy_Do_Repeat_Relay(string name)
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace MissionPlanner.Joystick
             config.p3 = (float) numericUpDown3.Value;
 
             MainV2.joystick.setButton(int.Parse(this.Tag.ToString()), config);
-        }
-    }
+      }
+   }
+   #endif
 }

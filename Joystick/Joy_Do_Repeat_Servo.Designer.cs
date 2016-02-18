@@ -1,5 +1,6 @@
 ﻿namespace MissionPlanner.Joystick
 {
+   #if !noDIRECTX
     partial class Joy_Do_Repeat_Servo
     {
         /// <summary>
@@ -160,4 +161,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
     }
+#endif
 }

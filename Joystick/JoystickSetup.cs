@@ -6,14 +6,18 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.DirectX.DirectInput;
 using OpenTK.Input;
 using MissionPlanner.Controls;
 using MissionPlanner.Utilities;
 
+#if !noDIRECTX
+using Microsoft.DirectX.DirectInput;
+#endif
+
 
 namespace MissionPlanner.Joystick
 {
+#if !noDIRECTX
     public partial class JoystickSetup : Form
     {
         bool startup = true;
@@ -638,4 +642,5 @@ namespace MissionPlanner.Joystick
                 MainV2.joystick.setReverse(8, ((CheckBox) sender).Checked);
         }
     }
+#endif
 }

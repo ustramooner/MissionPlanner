@@ -286,7 +286,9 @@ namespace MissionPlanner
         /// <summary>
         /// joystick static class
         /// </summary>
+#if !noDIRECTX
         public static Joystick.Joystick joystick = null;
+#endif
 
         /// <summary>
         /// track last joystick packet sent. used to control rate
@@ -1637,7 +1639,8 @@ namespace MissionPlanner
             base.OnFormClosed(e);
 
             Console.WriteLine("MainV2_FormClosed");
-
+         
+#if !noDIRECTX
             if (joystick != null)
             {
                 while (!joysendThreadExited)
@@ -1645,6 +1648,7 @@ namespace MissionPlanner
 
                 joystick.Dispose(); //proper clean up of joystick.
             }
+#endif
         }
 
 
@@ -1751,7 +1755,8 @@ namespace MissionPlanner
         /// thread used to send joystick packets to the MAV
         /// </summary>
         private void joysticksend()
-        {
+        {      
+#if !noDIRECTX
             float rate = 50; // 1000 / 50 = 20 hz
             int count = 0;
 
@@ -1773,8 +1778,7 @@ namespace MissionPlanner
 
                     if (!MONO)
                     {
-                        //joystick stuff
-
+                        //joystick stuff            
                         if (joystick != null && joystick.enabled)
                         {
                             MAVLink.mavlink_rc_channels_override_t rc = new MAVLink.mavlink_rc_channels_override_t();
@@ -1857,6 +1861,7 @@ namespace MissionPlanner
                 } // cant fall out
             }
             joysendThreadExited = true; //so we know this thread exited.    
+#endif
         }
 
         /// <summary>

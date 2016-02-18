@@ -4,15 +4,19 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using log4net;
-using Microsoft.DirectX.DirectInput;
 //using OpenTK.Input;
 using System.Reflection;
 using System.IO;
 
+#if !noDIRECTX
+using Microsoft.DirectX.DirectInput;
+#endif
+
 namespace MissionPlanner.Joystick
 {
+   #if !noDIRECTX
     public class Joystick : IDisposable
-    {
+   {
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         Device joystick;
         JoystickState state;
@@ -1435,5 +1439,6 @@ namespace MissionPlanner.Joystick
                 return min;
             return value;
         }
-    }
+   }
+   #endif
 }

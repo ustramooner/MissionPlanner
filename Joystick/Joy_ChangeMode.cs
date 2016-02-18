@@ -10,7 +10,8 @@ using System.Windows.Forms;
 namespace MissionPlanner.Joystick
 {
     public partial class Joy_ChangeMode : Form
-    {
+   {
+      #if !noDIRECTX
         public Joy_ChangeMode(string name)
         {
             InitializeComponent();
@@ -44,6 +45,7 @@ namespace MissionPlanner.Joystick
 
             // update entry
             MainV2.joystick.setButton(name, config);
-        }
+      }
+      #endif
     }
 }

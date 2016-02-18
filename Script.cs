@@ -37,7 +37,10 @@ namespace MissionPlanner
             scope.SetVariable("cs", MainV2.comPort.MAV.cs);
             scope.SetVariable("Script", this);
             scope.SetVariable("mavutil", this);
+         
+#if !noDIRECTX
             scope.SetVariable("Joystick", MainV2.joystick);
+#endif
 
             engine.CreateScriptSourceFromString("print 'hello world from python'").Execute(scope);
             engine.CreateScriptSourceFromString("print cs.roll").Execute(scope);

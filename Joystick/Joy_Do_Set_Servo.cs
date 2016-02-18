@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace MissionPlanner.Joystick
 {
+#if !noDIRECTX
     public partial class Joy_Do_Set_Servo : Form
     {
         public Joy_Do_Set_Servo(string name)
@@ -43,4 +44,5 @@ namespace MissionPlanner.Joystick
             MainV2.joystick.setButton(int.Parse(this.Tag.ToString()), config);
         }
     }
+#endif
 }

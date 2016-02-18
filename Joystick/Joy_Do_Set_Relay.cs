@@ -10,7 +10,8 @@ using System.Windows.Forms;
 namespace MissionPlanner.Joystick
 {
     public partial class Joy_Do_Set_Relay : Form
-    {
+   {
+      #if !noDIRECTX
         public Joy_Do_Set_Relay(string name)
         {
             InitializeComponent();
@@ -32,5 +33,6 @@ namespace MissionPlanner.Joystick
 
             MainV2.joystick.setButton(int.Parse(this.Tag.ToString()), config);
         }
+#endif
     }
 }

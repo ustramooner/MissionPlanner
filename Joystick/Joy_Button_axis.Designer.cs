@@ -1,5 +1,6 @@
 ﻿namespace MissionPlanner.Joystick
 {
+   #if !noDIRECTX
     partial class Joy_Button_axis
     {
         /// <summary>
@@ -125,4 +126,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numericUpDownpwmmax;
     }
+#endif
 }

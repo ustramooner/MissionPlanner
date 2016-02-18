@@ -10,7 +10,8 @@ using System.Windows.Forms;
 namespace MissionPlanner.Joystick
 {
     public partial class Joy_Do_Repeat_Servo : Form
-    {
+   {
+      #if !noDIRECTX
         public Joy_Do_Repeat_Servo(string name)
         {
             InitializeComponent();
@@ -37,6 +38,7 @@ namespace MissionPlanner.Joystick
             config.p4 = (float) numericUpDown4.Value;
 
             MainV2.joystick.setButton(int.Parse(this.Tag.ToString()), config);
-        }
+      }
+      #endif
     }
 }
