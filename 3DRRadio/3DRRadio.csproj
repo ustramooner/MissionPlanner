@@ -48,7 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net">
-      <HintPath>..\extLibs\log4net.dll</HintPath>
+      <HintPath>..\ExtLibs\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,7 +62,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="ZedGraph">
-      <HintPath>..\extLibs\ZedGraph.dll</HintPath>
+      <HintPath>..\ExtLibs\ZedGraph.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -81,8 +81,8 @@
       <Link>Linked\3DRradio.cs</Link>
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="..\Radio\3DRradio.designer.cs">
-      <Link>Linked\3DRradio.designer.cs</Link>
+    <Compile Include="..\Radio\3DRradio.Designer.cs">
+      <Link>Linked\3DRradio.Designer.cs</Link>
       <DependentUpon>3DRradio.cs</DependentUpon>
     </Compile>
     <Compile Include="..\Radio\IHex.cs">
