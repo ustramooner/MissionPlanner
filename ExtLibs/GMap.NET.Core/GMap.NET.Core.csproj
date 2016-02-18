@@ -104,6 +104,7 @@
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
+    <Reference Include="Mono.Data.Sqlite" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GMap.NET.CacheProviders\MemoryCache.cs" />
