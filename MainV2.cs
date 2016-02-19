@@ -24,6 +24,7 @@ namespace MissionPlanner
     {
         private static readonly ILog log =
             LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        
 
         private static class NativeMethods
         {
@@ -337,6 +338,22 @@ namespace MissionPlanner
         /// </summary>
         public static MainV2 instance = null;
 
+        private static string _userpath = null;
+        public static string UserPath
+        {
+            get{
+                if ( _userpath == null ){
+                    FileInfo fInfo = new FileInfo(Application.ExecutablePath); //use application path for backwards compatibility with windows
+                    if ( fInfo.IsReadOnly ){
+                        _userpath = Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + Path.DirectorySeparatorChar + "missionplanner";
+                    }else{
+                        _userpath = Path.GetDirectoryName(Application.ExecutablePath);
+                    }
+                }
+                return _userpath;
+            }
+        }
+
         public static string LogDir
         {
             get
@@ -352,7 +369,7 @@ namespace MissionPlanner
             }
         }
 
-        static string _logdir = Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar +
+        static string _logdir = UserPath + Path.DirectorySeparatorChar +
                                 @"logs";
 
         public static MainSwitcher View;
@@ -1655,7 +1672,7 @@ namespace MissionPlanner
         void xmlconfig(bool write)
         {
             if (write ||
-                !File.Exists(Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar +
+                !File.Exists(UserPath + Path.DirectorySeparatorChar +
                              @"config.xml"))
             {
                 try
@@ -1664,7 +1681,7 @@ namespace MissionPlanner
 
                     XmlTextWriter xmlwriter =
                         new XmlTextWriter(
-                            Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar +
+                            UserPath + Path.DirectorySeparatorChar +
                             @"config.xml", Encoding.UTF8);
                     xmlwriter.Formatting = Formatting.Indented;
 
@@ -1708,7 +1725,7 @@ namespace MissionPlanner
                 {
                     using (
                         XmlTextReader xmlreader =
-                            new XmlTextReader(Path.GetDirectoryName(Application.ExecutablePath) +
+                        new XmlTextReader(UserPath +
                                               Path.DirectorySeparatorChar + @"config.xml"))
                     {
                         log.Info("Loading config");
@@ -2605,7 +2622,7 @@ namespace MissionPlanner
                 if (getConfig("almanac_date") != DateTime.Now.ToShortDateString())
                 {
                     Common.getFilefromNet("http://alp.u-blox.com/current_1d.alp",
-                        Application.StartupPath + Path.DirectorySeparatorChar + "current_d1.alp");
+                        UserPath + Path.DirectorySeparatorChar + "current_d1.alp");
                     config["almanac_date"] = DateTime.Now.ToShortDateString();
                 }
             }

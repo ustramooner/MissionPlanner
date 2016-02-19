@@ -24,7 +24,7 @@ namespace MissionPlanner.Maps
         {
             Instance = this;
 
-            CacheLocation = Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar +
+            CacheLocation = MainV2.UserPath + Path.DirectorySeparatorChar +
                             "gmapcache" + Path.DirectorySeparatorChar;
         }
 

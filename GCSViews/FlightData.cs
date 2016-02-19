@@ -277,7 +277,7 @@ namespace MissionPlanner.GCSViews
 
             // config map      
             log.Info("Map Setup");
-            gMapControl1.CacheLocation = Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar +
+            gMapControl1.CacheLocation = Application.LocalUserAppDataPath + Path.DirectorySeparatorChar +
                                          "gmapcache" + Path.DirectorySeparatorChar;
             gMapControl1.MapProvider = GMapProviders.GoogleSatelliteMap;
             gMapControl1.MinZoom = 0;

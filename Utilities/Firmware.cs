@@ -119,7 +119,7 @@ namespace MissionPlanner.Utilities
         /// </summary>
         public Firmware()
         {
-            string file = Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar +
+            string file = MainV2.UserPath + Path.DirectorySeparatorChar +
                           "FirmwareHistory.txt";
 
             if (!File.Exists(file))
@@ -359,7 +359,7 @@ namespace MissionPlanner.Utilities
 
             using (
                 StreamWriter sw =
-                    new StreamWriter(Application.StartupPath + Path.DirectorySeparatorChar + "fwversions.xml"))
+                new StreamWriter(MainV2.UserPath + Path.DirectorySeparatorChar + "fwversions.xml"))
             {
                 writer.Serialize(sw, list);
             }
@@ -374,7 +374,7 @@ namespace MissionPlanner.Utilities
 
                 using (
                     StreamReader sr =
-                        new StreamReader(Application.StartupPath + Path.DirectorySeparatorChar + "fwversions.xml"))
+                    new StreamReader(MainV2.UserPath + Path.DirectorySeparatorChar + "fwversions.xml"))
                 {
                     return (List<software>) reader.Deserialize(sr);
                 }
@@ -610,7 +610,7 @@ namespace MissionPlanner.Utilities
 
                 FileStream fs =
                     new FileStream(
-                        Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar +
+                        MainV2.UserPath + Path.DirectorySeparatorChar +
                         @"firmware.hex", FileMode.Create);
 
                 updateProgress(0, Strings.DownloadingFromInternet);
@@ -650,7 +650,7 @@ namespace MissionPlanner.Utilities
             MissionPlanner.Utilities.Tracking.AddFW(temp.name, board.ToString());
 
             return UploadFlash(comport,
-                Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar + @"firmware.hex", board);
+                MainV2.UserPath + Path.DirectorySeparatorChar + @"firmware.hex", board);
         }
 
         void apmtype(object temp)
