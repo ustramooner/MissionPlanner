@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Mission Planner
+GenericName=missionplanner
+Exec=/usr/lib/missionplanner/MissionPlanner.exe
+Terminal=false
+Categories=Education;Robotics;
+Comment=A UAV Ground Station
+Icon=/usr/share/icons/hicolor/48x48/apps/missionplanner.png
+
+Name[en_AU]=MissionPlanner.desktop

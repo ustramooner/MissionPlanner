@@ -1,0 +1,16 @@
+Package: missionplanner
+Section: science
+Priority: extra
+Architecture: all
+Maintainer: APM Planner Developers <stephen_dade@hotmail.com>
+Depends: gnome-icon-theme (>= 1.1.3), mono-runtime-sgen, mono-runtime (>= 3.0~), libc6 (>= 2.13) | libc6.1 (>= 2.13) | libc0.1 (>= 2.13), libmono-system-configuration4.0-cil (>= 4.0.0~alpha1), libmono-system-data4.0-cil (>= 4.0.0~alpha1), libmono-system-windows-forms4.0-cil (>= 1.0), libmono-system4.0-cil (>= 4.0.0~alpha1)
+Version: VERSION
+Installed-Size: INSTALLED_SIZE
+Description: Ground station software for autonomous vehicles.
+ A GUI ground control station for autonomous vehicles 
+ using the MAVLink protocol.
+ Includes support for the APM and PX4 based controllers.
+ .
+ You will need a fairly recent version of mono. You can download the most
+ recent version here: 
+ http://www.mono-project.com/docs/getting-started/install/linux/
