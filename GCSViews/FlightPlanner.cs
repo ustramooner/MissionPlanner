@@ -431,7 +431,7 @@ namespace MissionPlanner.GCSViews
             InitializeComponent();
 
             // config map             
-            MainMap.CacheLocation = Application.LocalUserAppDataPath + Path.DirectorySeparatorChar +
+            MainMap.CacheLocation = MainV2.UserPath + Path.DirectorySeparatorChar +
                                     "gmapcache" + Path.DirectorySeparatorChar;
             MainMap.MapProvider = GoogleSatelliteMapProvider.Instance;
 

@@ -1,4 +1,4 @@
-missionplanner (1.3.34-1-gae9440b) UNRELEASED; urgency=low
+missionplanner (1.3.999991-1-g140dc73) UNRELEASED; urgency=low
 
   [ 2016-02-21  Ben van Klinken  <ustramooner@users.sourceforge.net> ]
   * various debian packaging fixes
@@ -2975,4 +2975,4 @@ missionplanner (1.3.34-1-gae9440b) UNRELEASED; urgency=low
   [ 2013-02-05  Andrew Tridgell  <tridge@samba.org> ]
   * Initial commit
 
- -- MAINTAINER <MissionPlanner@noreply.github.com>  Sun, 21 Feb 2016 11:38:27 +1000
+ -- MAINTAINER <MissionPlanner@noreply.github.com>  Sun, 21 Feb 2016 11:41:29 +1000
