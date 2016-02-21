@@ -2820,7 +2820,7 @@ Please check the following
                             MAVlist[sysid, compid].cs.messageHighTime = DateTime.Now;
 
                             if (MainV2.speechEngine != null &&
-                                MainV2.speechEngine.State == System.Speech.Synthesis.SynthesizerState.Ready &&
+                                MainV2.speechEngine.IsReady &&
                                 MainV2.config["speechenable"] != null &&
                                 MainV2.config["speechenable"].ToString() == "True")
                             {
