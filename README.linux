@@ -1,0 +1,46 @@
+#debugging:
+echo "0" | sudo tee /proc/sys/kernel/yama/ptrace_scope
+change /etc/sysctl.d/10-ptrace.conf to 0 to make permanent (might have some other security issues - check it out for yourself before making the change)
+
+#packaging
+todo
+- need to correctly annotate tags
+
+
+* make nuget work (missing certs)
+sudo mozroots --import --machine --sync
+sudo certmgr -ssl -m https://go.microsoft.com
+sudo certmgr -ssl -m https://nugetgallery.blob.core.windows.net
+sudo certmgr -ssl -m https://nuget.org
+
+* make extra build stuff (like nuget) work
+  Go to Edit -> Preferences -> Projects -> Build and check the option "Compile projects using MSBuild / XBuild".
+
+* run on root - nuget misses it
+ mono --runtime=v4.0.30319 .nuget/NuGet.exe install packages.config
+
+* use mega solution
+
+* install mono 4.2!!!
+
+* progress on Numpy for Auto Analysis:
+
+* some native stuff doesn't work:
+  - auto analysis uses a native dll
+    - potentially copy bin/Debug/DLLs into bin/Debug (??)
+    - have partially working numpy dll
+  - sitl stuff downloads windows versions
+
+
+Numpy:
+get https://github.com/teoliphant/numpy-refactor.git
+install libatlas
+cd libndarray
+./configure && make
+cd ..
+python setup.py build
+
+go to numpy/NumpyDotNet/NpyAccessLib$
+<PATH TO IRONPYTHONG>/ipy.exe ../../core/code_generators/generate_umath.py
+
+

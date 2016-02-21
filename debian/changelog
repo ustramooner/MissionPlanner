@@ -1,0 +1,2978 @@
+missionplanner (1.3.34-1-gae9440b) UNRELEASED; urgency=low
+
+  [ 2016-02-21  Ben van Klinken  <ustramooner@users.sourceforge.net> ]
+  * various debian packaging fixes
+
+  [ 2016-02-20  Ben van Klinken  <ustramooner@users.sourceforge.net> ]
+  * debian build scripts
+  * fix linux config locations - use config dir (with backwards compatibility to
+  * these changes found to reduce the x11 errors
+
+  [ 2016-02-18  Ben van Klinken  <ustramooner@users.sourceforge.net> ]
+  * some build problems with mono/linux
+  * import mono.data.sqlite
+  * fix log analyzer startup path
+  * improve HUD failure message
+  * fix mono startup
+  * remove non-existent files from projects
+  * resx fixes
+  * joystick off (temporary 2)
+  * swap to new sqllite library
+  * disable joystick (temporaryily)
+  * Mono/Linux case and build fixes
+
+  [ 2015-12-24  Michael Oborne  <mich146@hotmail.com> ]
+  * Mission Planner 1.3.34
+  * temp: make gps passthrough static
+  * LogBrowse: add full path to xml
+  * add null exception checks
+
+  [ 2015-12-23  Michael Oborne  <mich146@hotmail.com> ]
+  * drivers: fix eol
+  * fitCurve: add
+  * CurrentState: add servo_output port checking #1090
+
+  [ 2015-12-22  Gonzalo Alonso  <gonkpo@gmail.com> ]
+  * Translation es-ES
+
+  [ 2015-12-22  LukeMike  <luca.micheletti.laser@gmail.com> ]
+  * VRBRAIN: change description of some USB drivers and added missing drivers
+  * VRBRAIN: added firmware management for new board VR Brain Core 1.0 and delet
+  * VRBRAIN: added detection for new board VR Brain Core 1.0 and deleted unneces
+
+  [ 2015-12-22  Daniel Agar  <daniel@agar.ca> ]
+  * add camera Sony Alpha NEX-7
+
+  [ 2015-12-22  Michael Oborne  <mich146@hotmail.com> ]
+  * mavcmd: remove engine cut off reference #1070
+  * GridUI: add missing field to save/load #1071
+  * FlightPlanner: make fields public #1074
+  * Joystick: update buttonaxis min range #1080
+  * MAVLinkParam: add explicit double conversion #1085
+  * BinaryLog: add more detection rules #1089
+
+  [ 2015-12-18  Michael Oborne  <mich146@hotmail.com> ]
+  * vlcrender: add custom url support
+
+  [ 2015-12-16  Michael Oborne  <mich146@hotmail.com> ]
+  * MAVLink: upstream update
+  * CollectionBuffer: fix null exception #1075
+  * vlc intergration
+  * LibVLC.Net
+  * ElevationProfile: fix null exception #1084
+  * Tracking: add exception fix
+  * FlightData: check zoom level on startup
+  * ElevationGraph: add null check #1084
+
+  [ 2015-12-15  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightData: fix conversion exception
+  * ADSB: accept from and sysid/compid
+
+  [ 2015-12-14  Michael Oborne  <mich146@hotmail.com> ]
+  * CurrentState: add adsb
+  * MAVLink: update
+  * MagCalib: fix compass 3 calib
+
+  [ 2015-12-12  Michael Oborne  <mich146@hotmail.com> ]
+  * ConfigBattery: update for mono exit
+  * ConfigTradHeli: update buttons
+
+  [ 2015-12-08  Michael Oborne  <mich146@hotmail.com> ]
+  * ConfigTradHeli: update
+  * MissionPlanner 1.3.33
+  * ThemeManager: fix tree view under high contrast
+
+  [ 2015-12-07  Michael Oborne  <mich146@hotmail.com> ]
+  * LogBrowse: handle currupt log better
+
+  [ 2015-12-05  Michael Oborne  <mich146@hotmail.com> ]
+  * SBP: add inject gps sbp detection
+  * MAVLinkParam: implement all casts
+
+  [ 2015-12-04  Michael Oborne  <mich146@hotmail.com> ]
+  * FirmwareHistory: update
+  * CheckList: add to flightdata view
+
+  [ 2015-11-28  Michael Oborne  <mich146@hotmail.com> ]
+  * SimpleExample: request datastreams
+
+  [ 2015-11-27  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightPlanner: fix dragging group bug, and speed improvement
+  * MAVList: fix 3dr radio case
+  * px4uploader: remove otp check
+  * SimpleExample: update
+  * MAVList: update 3dr radio special case
+
+  [ 2015-11-25  Jeremy Kolb  <jkolb@ara.com> ]
+  * GMapMarker: Make Position virtual
+  * This allows custom positioning logci per marker: for instance a marker type
+  * could have it's position set once and not be allowed to move.
+
+  [ 2015-11-25  Michael Oborne  <mich146@hotmail.com> ]
+  * Georefimage: calc average offset #1057
+  * FlightPlanner: use units for wp circle #1068
+
+  [ 2015-11-24  Michael Oborne  <mich146@hotmail.com> ]
+  * ConfigPlanner: add method to get to testing screen.
+
+  [ 2015-11-24  Jeremy Kolb  <jkolb@ara.com> ]
+  * Allow a plugin to insert waypoints anywhere in the list
+
+  [ 2015-11-24  haripradhan  <haripradhan12@gmail.com> ]
+  * Autosized an input box vertically instead of horizontally.
+  * Display layer title in the WMS input box instead of layer name.
+  * Modified GetCapabilities URL to work even if the wms server URL includes que
+
+  [ 2015-11-24  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * MAVLinkInterface: keep track of wps read from mav #1062
+
+  [ 2015-11-23  Michael Oborne  <mich146@hotmail.com> ]
+  * MAVLink: library tidyup
+
+  [ 2015-11-22  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightPlanner: add text autowp
+
+  [ 2015-11-21  Michael Oborne  <mich146@hotmail.com> ]
+  * MAVlinkInterface: change getwp timeout to 3500 ms
+  * MAVLinkInterface: update mav severity info
+  * MAVLinkinterface: increase log timeouts and retrys #1061
+  * LogDownloadMavlink: fix posible bad time exception #1061
+
+  [ 2015-11-20  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightPlanner: fix load and append file types
+  * FlightPlanner: revert/tidy wp file format #1050
+
+  [ 2015-11-19  Michael Oborne  <mich146@hotmail.com> ]
+  * Preflight control
+  * GeoRef: cleanup and exception check
+
+  [ 2015-11-16  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightData: remove preflight binding
+  * FlightData: remove preflight
+  * InjectGPS: add rtcm indicator
+  * CommsUDPSerialConnect: fix udp circle buffer issue
+  * MainV2: fix posible null exception
+
+  [ 2015-11-15  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightData: log MavChanged events
+  * FlightPlanner: fix prefetch max zoom level #1054
+  * Followme/MovingBase: cleanup
+  * Plugin: expose map control to plugins #1056
+  * Remove pyc files
+  * MAVLink: update from upstream
+
+  [ 2015-11-14  Michael Oborne  <mich146@hotmail.com> ]
+  * Formatting
+  * FlightData: Set preflight to not visible
+  * AP_GPS_GSOF: add ability to test
+  * ConfigMotorTest: update url
+
+  [ 2015-10-31  Bryant Mairs  <bryant@intelinair.com> ]
+  * Switch over to using .waypoints for mission lists.
+  * Now compatible with QGroundControl.
+  * Update waypoint list format to be compatible with QGroundControl.
+
+  [ 2015-10-31  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightData: fix language on button
+
+  [ 2015-10-30  Michael Oborne  <mich146@hotmail.com> ]
+  * LogBrowse: fix remove from graph
+  * CommsUdpSerial: fix circle buffer #1049
+  * FlightData: reverse message list #1046
+  * Common: change ms to meters_per_second
+  * RangeFinder: rename from sonar
+
+  [ 2015-10-26  Michael Oborne  <mich146@hotmail.com> ]
+  * FirmwareHistory: update
+  * LogBrowse: do full name check on add/remove #1025
+
+  [ 2015-10-25  Michael Oborne  <mich146@hotmail.com> ]
+  * PreFlightChecklist: calc voltage warngings
+
+  [ 2015-10-25  ZeSly  <zesly42@gmail.com> ]
+  * Bug fix out of range in GetGPSFromRow when dbl-click far right on the graph
+  * Bug fix out of range when looking for position in GetGPSFromRow
+
+  [ 2015-10-25  SkiTiSu  <sjtsjjy@163.com> ]
+  * FlightPlanner: adjust alt when WP move... #736
+  * in Verify Height mode
+  * TODO: Verify all WPs that already exist after check Verify Height.
+  * Kindex: fix could be reset after have got #750
+  * L10N: update zh-Hans translation
+
+  [ 2015-10-25  Michael Oborne  <mich146@hotmail.com> ]
+  * ConnectionControl: make sysid dropdown wider.
+  * MainSwitcher: add 2nd retry, and soft fail
+  * Grid: add ability to start/stop cam trig dist
+
+  [ 2015-10-24  Michael Oborne  <mich146@hotmail.com> ]
+  * srtm: increase tile download zoom level
+
+  [ 2015-10-22  Michael Oborne  <mich146@hotmail.com> ]
+  * ConnectionControl: add sysid selection
+  * GridUI: fix do_digicam_control from grid
+
+  [ 2015-10-21  Michael Oborne  <mich146@hotmail.com> ]
+  * LogAnalyzer: update
+  * LogIndex: add some more fields #1039
+  * LogIndex: make less verbose during read
+  * FlightPlanner: accept floats in wp_rad #1037
+  * CollectionBuffer: fix type scope max # 1040
+
+  [ 2015-10-20  Michael Oborne  <mich146@hotmail.com> ]
+  * DFLog: add missing events #1031
+  * Currentstate: add rpm #1038
+  * ConfigArduCopter: IMAX Scaling #1034
+  * Firmware: remove OTP check
+
+  [ 2015-10-06  Michael Oborne  <mich146@hotmail.com> ]
+  * Show position on the map when clicking on the graph.
+  * added WinMerge backup files *.bak in .gitignore
+
+  * Log/LogBrowse.cs :
+  * m_dtCSV populated only for MONO
+  * function GetGPSFromRow() rewritten to find nearest GPS log when clicking on 
+  * function GetTimeFromRow() commented, not used.
+  * (cherry picked from commit 14d3550f59ea2404183cd76d860cca27353b4614)
+
+  * GetGPSFromRow function look for POS message in addition to GPS message
+  * (cherry picked from commit cf2be94251d7fdbf1e51b9226397110d852341f8)
+
+  * File replaced after a bad rebase.
+  * (cherry picked from commit 9c877765cc355c7e97445b73c40311b379d94616)
+
+  [ 2015-10-06  Michael Oborne  <mich146@hotmail.com> ]
+  * ConfigRawParams: fix compile issue
+  * ConfigHWCompass: fix buttons
+
+  [ 2015-10-06  Michael Oborne  <mich146@hotmail.com> ]
+  * New compass UI (cherry picked from commit c82d91e4653526719a95982e9740cb2061
+  * Replaced radio buttons with buttons
+  * (cherry picked from commit 9105379f18c52686141b71d1dab6df91e533d3c3)
+
+  * Most of interface wired up
+  * (cherry picked from commit 02d7a61c8a9854c8011836b818fb7db534ec115a)
+
+  * Added offsets/mots
+  * (cherry picked from commit 876d38dc5f08306b25ba4cc2abf3eeb781da843b)
+
+  * Control hiding/showing works
+  * (cherry picked from commit c66dc79c1b88bed462209dc040565408a852a349)
+
+  * Quick configure buttons work
+  * (cherry picked from commit 28757cb344f74ccb5df019127966e73a3df39634)
+
+  * OFS/MOT rounded
+  * (cherry picked from commit 636c9302a485858b4b48c6e27e51f04e38907ecf)
+
+  * Color coding of offset labels
+  * (cherry picked from commit c075c27344bb2795568fd54eff65c3b759706870)
+
+  * Cleaned up some bugs
+  * (cherry picked from commit 699849fd6f27a1cd3f6973ddc3dcd8873b7e4b38)
+
+  * Fixed checking/unchecking bugs
+  * (cherry picked from commit 4cd966f8b0d2cf806acc38c72b237bbd68e2a378)
+
+  * Tab order
+  * (cherry picked from commit 434de567ad51849e1df11692c576595690d10454)
+
+  * Fixed bug where newly calibrated compass offsets were not refreshed in the p
+  * (cherry picked from commit ab2e39f4417855594869fe2e39a03ae51620ef9b)
+
+  * Merge branch 'compassoffs' into newcompass
+  * (cherry picked from commit 6153f17c2e0aa7e2e4d8820c0b7f02ce0df77826)
+
+  * New compass setup page completed
+  * (cherry picked from commit 47155b33db219c6697dfe6d58c1b0b04ff0b4520)
+
+  [ 2015-10-06  Michael Oborne  <mich146@hotmail.com> ]
+  * ConfigRawParams: add search box
+  * temp: add QNH setting (use with caution)
+  * FlightPlanner: allow terrain type for AC 3.4+ #1022
+
+  [ 2015-10-04  Michael Oborne  <mich146@hotmail.com> ]
+  * Common: add timeinair to speech options
+  * Gmaps: map url update
+  * ConfigMount: restore trigg_type on load #1017
+  * ConfigRawParams: add incremental search/search on type #1020
+
+  [ 2015-10-03  Michael Oborne  <mich146@hotmail.com> ]
+  * CommsSerialPort: add back abortonerror dcb
+
+  [ 2015-10-02  ZeSly  <zesly42@gmail.com> ]
+  * Tab order on Extended Tuning
+  * LogBrowser : added min, max and mean to graph legend
+
+  [ 2015-09-29  Michael Oborne  <mich146@hotmail.com> ]
+  * LogBrowse: add right axis support from mavgraphs.xml
+  * mavgraphs: add ekfgraphs.xml
+  * LogBrowse: add simple mavgraphs.xml support
+  * LogDownloadMavlink: add debug loginfo
+
+  [ 2015-09-27  Michael Oborne  <mich146@hotmail.com> ]
+  * Terminal: prevent outofrange in terminal
+  * ConfigRawParams: add are you sure to write dialogs.
+  * FlightData: add exception check to takeoff command
+  * GMapControl: add exception check to graphicspath
+  * FlightData: add exception check to set home
+
+  [ 2015-09-26  Michael Oborne  <mich146@hotmail.com> ]
+  * ElevationGraph: remove roi points from path.
+
+  [ 2015-09-25  Michael Oborne  <mich146@hotmail.com> ]
+  * MagCalib: add 3rd compass
+
+  [ 2015-09-24  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightData: support param rename #981
+  * LogOutput: fix globalization issue on .obs
+  * MavlinkInterface: make hud text less verbose
+  * ConfigHWCompass: add fitness values for onboard mag cal
+  * GridUI: add simple wpno based split
+
+  [ 2015-09-23  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightData: modify resume mission to work for plane
+  * georefimage: fix relalt, credit to #jmachuca77
+  * .gitignore: add file
+  * .gitignore: update
+  * GimbalPoint: formatting
+  * temp: remove rtsp
+  * Program: add typeloadexception handle
+  * SerialInjectGPS: fix requirement for baud on network protocols
+  * SITL: add error handling
+
+  [ 2015-09-22  Michael Oborne  <mich146@hotmail.com> ]
+  * GMapControl: prevent exception on list change
+  * GMaps: update g versions
+  * CurrentState: set default telemrates
+  * FlightData: fix cross thread ui call
+  * GridUI: fix runaway
+
+  [ 2015-09-21  Michael Oborne  <mich146@hotmail.com> ]
+  * LogBrowse: fix gps status check
+  * Grid: update load/save options
+
+  [ 2015-09-20  Michael Oborne  <mich146@hotmail.com> ]
+  * LogBrowse: performance improvements
+  * ConfigHWCompass: add calibrate history buffer
+  * Grid: decrease min distance bwteen lines #1007
+
+  [ 2015-09-18  Michael Oborne  <mich146@hotmail.com> ]
+  * Mavlink: update
+  * ConfigHWCompass: add onboard compass cal (WIP)
+  * PreFlightChecklist: move
+  * CurrentState: add imu3 values
+
+  [ 2015-09-17  Michael Oborne  <mich146@hotmail.com> ]
+  * GeoTiff: fix start coords center pixel
+
+  [ 2015-09-16  Michael Oborne  <mich146@hotmail.com> ]
+  * PreFlightChecklist: initial version
+
+  [ 2015-09-16  Chris Stephens  <github@hangarspace.co.uk> ]
+  * Corrected a bug in the flight planner pre-fetch function that was prefetchin
+  * Modified  the 'Help->Check Updates' button to call a modified Update.CheckFo
+  * Modified 'Update.CheckForUpdate()' method to take an optional boolean parame
+  * Conflicts:
+  * 	Strings.resx
+
+  [ 2015-09-16  Michael Oborne  <mich146@hotmail.com> ]
+  * L10N: fixs
+
+  [ 2015-09-16  四季天书SkiTiSu  <sjtsjjy@163.com> ]
+  * GCSViews: add ESC Calibration #926
+  * Conflicts:
+  * 	GCSViews/InitialSetup.Designer.cs
+  * 	GCSViews/InitialSetup.resx
+  * 	MissionPlanner.csproj
+  * L10N: read config in advance
+  * L10N: rename and support CurrentState
+  * L10N=Localization
+
+  [ 2015-09-16  Marco Antonio Arruda  <marco.nc.arruda@gmail.com> ]
+  * Testar e parar todos os motores
+
+  [ 2015-09-16  Michael Oborne  <mich146@hotmail.com> ]
+  * mavcmd: add abort alt #1002
+  * ConfigBatteryMonitor2: add
+  * FlightPlanner: defaults for do_digicam_control
+  * CurrentState: tweak stream rate defaults
+
+  [ 2015-09-15  Michael Oborne  <mich146@hotmail.com> ]
+  * CurrentState: add terrain text
+  * MAVList: add compid support
+  * MissionPlanner 1.3.32
+  * BinaryLog: add convert progress dialog
+  * LogBrowse: add null check
+  * Wizard: add invalid bat monitor check
+  * SITL: add invalid home check
+  * GeoTiff: add directory exists check
+
+  [ 2015-09-14  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightData: update "change speed" when no airspeed precent #1001
+
+  [ 2015-09-12  Michael Oborne  <mich146@hotmail.com> ]
+  * add ironpython lib dll's
+  * AP_GPS_GSOF: add baud change
+  * DFLog: make threadsafe
+  * LogBrowse: memory performance change
+  * BinaryLog: make threadsafe
+  * LogBrowse: enable virtualmode for all logs
+
+  [ 2015-09-09  Michael Oborne  <mich146@hotmail.com> ]
+  * ap_gps_sbf: add accuracys
+  * FlightData/Planner: fix background exceptions
+  * ParamMetaData: fix loading primary metadata
+  * FlightPlanner: fix param cast
+  * ParamMetaData: fix param info get
+
+  [ 2015-09-08  Michael Oborne  <mich146@hotmail.com> ]
+  * LogBrowse: add presaved log entries
+  * EKFStatus: remove flag color
+  * BinaryLog: make convertbin less verbose
+  * LogOutput: fix waypoint at 0,0
+
+  [ 2015-09-07  Michael Oborne  <mich146@hotmail.com> ]
+  * LogIndex:  add tlog duration
+  * FirmwareHistory: update
+
+  [ 2015-09-06  Michael Oborne  <mich146@hotmail.com> ]
+  * MainV2: exclude gimbals from getting home point #986
+  * MainV2: add sysid to home point error message #986
+  * mavcmd: update do_mount_control for all types #988
+  * ConfigMount: add mnt_type #987
+  * parammetadata: update backup data
+  * mavcmd: update headers #988
+  * remove requirement for unsafe
+  * GeoTiff: add geotiff support #985
+
+  [ 2015-09-04  Michael Oborne  <mich146@hotmail.com> ]
+  * gpsdrivers: update
+  * temp: add reset pixhawk option (no warning)
+  * MagCalib: dont accept 0,0 data
+  * 3DRRadio: increase multiline responce time
+  * MavlinkInterface: add getVersion and fix severity display
+  * HUD: show ekf red at 0.8
+
+  [ 2015-08-30  Michael Oborne  <mich146@hotmail.com> ]
+  * ParamMetaData: tidy old code
+
+  [ 2015-08-29  Michael Oborne  <mich146@hotmail.com> ]
+  * MAVLinkInterface: fix mp log message
+  * LogOutput: add POS distance filter
+  * EKFStatus: add color to flags
+  * EKFStatus: fix transposed values
+
+  [ 2015-08-28  Michael Oborne  <mich146@hotmail.com> ]
+  * GPS Driver Update
+  * MAVLinkInterface: add mp version to tlogs
+  * MAVLink: update to master
+
+  [ 2015-08-22  Michael Oborne  <mich146@hotmail.com> ]
+  * px4uploader: add another forged key
+
+  [ 2015-08-21  Michael Oborne  <mich146@hotmail.com> ]
+  * Georef: add missing files
+  * EKFStatus: fix scale and flags
+  * GeoRef update
+
+  [ 2015-08-20  Michael Oborne  <mich146@hotmail.com> ]
+  * HUD: always display ekf and vibe
+  * BaseClasses: revert .net version
+
+  [ 2015-08-17  Michael Oborne  <mich146@hotmail.com> ]
+  * LogBrowse: increase type scan limit #972
+  * LogBrowse: add Vibe message preselection #971
+
+  [ 2015-08-16  Michael Oborne  <mich146@hotmail.com> ]
+  * LogOutput: add pos message output to kml
+  * LogBrowse: Add POS message output
+  * ap_gps_sbf update
+  * PointLatLngAlt: add another contructor
+  * Common: add more speech entries
+
+  [ 2015-08-14  Michael Oborne  <mich146@hotmail.com> ]
+  * Driver eol fix
+  * ImageOverFilter: remove from compile
+  * BaseClasses: change target framework
+
+  [ 2015-08-11  Michael Oborne  <mich146@hotmail.com> ]
+  * EKFStatus: add #949
+  * Hud: add vibration and ekf #948
+  * simpleexample: fix example #922
+  * px4uploader: add forged cert check
+  * changelog: update changelog for mp 1.3.31
+
+  [ 2015-08-09  Michael Oborne  <mich146@hotmail.com> ]
+  * NoFly: add nofly support. (kmz loader from nofly dir)
+  * paramcompare: fix double vs float #963
+  * srtm: add 0,0 check
+  * CommsNTRIP: modify user agent.
+  * CommsNTRIP: tweak keepalive
+  * commNTRIP: add tcp keepalive
+  * Vibration: update to display lines
+  * NGEN: add ngen at startup if posible
+
+  [ 2015-08-08  Michael Oborne  <mich146@hotmail.com> ]
+  * DFLog: improve performance on bad gps message
+  * CommsNTRIP: fix reconnect logic
+  * logbrowse: support gps fix >=3
+  * SerialInjectGPS: fix ntrip baud issue
+
+  [ 2015-08-07  Michael Oborne  <mich146@hotmail.com> ]
+  * wix: fix path
+  * LogOutput: fix df kml with all gps lock types
+  * MissionPlanner 1.3.31
+
+  [ 2015-08-06  Michael Oborne  <mich146@hotmail.com> ]
+  * georefimage: update offsets #946
+  * FlightPlanner: fix waypoint panel size
+  * currentstate: fix x/y issue on optical flow #959
+  * MainV2: change dtr logic, default to off
+
+  [ 2015-08-04  Michael Oborne  <mich146@hotmail.com> ]
+  * ConfigArducopter: update FF params to VFF #950
+  * configarducopter: add new param names #951
+  * configmount: rename combobox
+  * FlightData: make useritem/quickview selection scrolable
+  * configplanner: make JP language selectable
+  * add JP translation by Jiro Hattori & Co
+  * CurrentState: adjust default stream rates, to increase idle bandwidth
+
+  [ 2015-08-02  四季天书SkiTiSu  <sjtsjjy@163.com> ]
+  * GCSViews: add Parachute #906
+  * Localizations: update zh-Hans translations
+  * Conflicts:
+  * 	GCSViews/FlightPlanner.Designer.cs
+  * 	GCSViews/FlightPlanner.resx
+  * MavlinkCheckBoxBitMask: fix refresh chkboxes #912
+  * Refresh checkboxes while entering Standard Params, instead of setup
+  * again.
+  * ParameterMetaDataRepository: remove zh-Hans support
+
+  [ 2015-08-02  Michael Oborne  <mich146@hotmail.com> ]
+  * DistanceBar: fix paint issues
+  * Startup speed tweaks
+
+  [ 2015-07-30  Michael Oborne  <mich146@hotmail.com> ]
+  * Vibration: Add initial moc
+
+  [ 2015-07-29  Michael Oborne  <mich146@hotmail.com> ]
+  * Terminal: prevent command clearing on update #945
+
+  [ 2015-07-28  Michael Oborne  <mich146@hotmail.com> ]
+  * ParamFile: fix float/double compare
+
+  [ 2015-07-23  Michael Oborne  <mich146@hotmail.com> ]
+  * AP_GPS_SBF: update
+  * FlightData: add script usage
+
+  [ 2015-07-20  Michael Oborne  <mich146@hotmail.com> ]
+  * px4uploader: clear input buffer on identify
+
+  [ 2015-07-19  Michael Oborne  <mich146@hotmail.com> ]
+  * GridUI: fix ft/m issue
+
+  [ 2015-07-15  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightData: update resume mission to replace old mission
+
+  [ 2015-07-14  Michael Oborne  <mich146@hotmail.com> ]
+  * CurrentState: add vibeclip0avg
+  * MAVlinkInterface: add force disarm #891
+
+  [ 2015-07-13  Michael Oborne  <mich146@hotmail.com> ]
+  * UTMWGS: fix equator bug
+
+  [ 2015-07-13  四季天书SkiTiSu  <sjtsjjy@163.com> ]
+  * ParameterMetaData: remove zh-Hans ver.
+  * AC3.3 changed a lot so this file is not compatible
+  * Localizations: update urls
+  * Localizations: update Firmware zh-Hans
+  * MainV2: disable font size change of Chinese
+  * Chinese displayed normally when scaling. But would be too small or large
+  * using this line of code.
+  * ConfigRadioInput: update binding zh-Hans trans
+
+  [ 2015-07-13  Tom Pittenger  <magicrub@gmail.com> ]
+  * Mavlink: heartbeat is mispelled
+
+  [ 2015-07-13  Michael Oborne  <mich146@hotmail.com> ]
+  * CurrentState: support negative current From kozinalexey
+  * SerialInjectGPS: update baud rate box
+  * MainV2: move kindex to background thread
+  * flightdata: fix hidden exception
+  * GoogleMap: speed up init, and modify url
+  * CommsUDPSerial: make dialog generic
+
+  [ 2015-07-08  Michael Oborne  <mich146@hotmail.com> ]
+  * MAVLinkParam: set type before value.
+  * Update internal Param system
+  * Terminal: change nsh timing
+
+  [ 2015-07-06  Michael Oborne  <mich146@hotmail.com> ]
+  * Tidy Warning
+
+  [ 2015-07-02  Michael Oborne  <mich146@hotmail.com> ]
+  * python example
+
+  [ 2015-06-30  Michael Oborne  <mich146@hotmail.com> ]
+  * app.config: update urls so xp update still works
+  * LogOutput: add more rinex support
+
+  [ 2015-06-28  Michael Oborne  <mich146@hotmail.com> ]
+  * MavlinkCheckBoxBitmask: fix masking
+
+  [ 2015-06-25  Michael Oborne  <meee146@gmail.com> ]
+  * SerialOutputPass: add udp options
+  * Terminal: nsh over mavlink tweaks
+
+  [ 2015-06-23  Michael Oborne  <meee146@gmail.com> ]
+  * GoogleSatelliteMap: update version no
+
+  [ 2015-06-22  Michael Oborne  <meee146@gmail.com> ]
+  * NoFly: update loader and callback
+
+  [ 2015-06-20  Michael Oborne  <meee146@gmail.com> ]
+  * ConfigAccelerometerCalibration: move to 1 accel calib screen
+
+  [ 2015-06-19  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.30
+  * ConfigRadioInput: fix yaw/thro swap
+
+  [ 2015-06-18  Michael Oborne  <meee146@gmail.com> ]
+  * Terminal: add nsh over mavlink
+  * MAVLink update
+
+  [ 2015-06-17  Michael Oborne  <meee146@gmail.com> ]
+  * MissionPlanner 1.3.29
+  * GimbalPoint: add storm code
+  * LogBrowse: switch back to line number default
+
+  [ 2015-06-16  Michael Oborne  <meee146@gmail.com> ]
+  * DroneShare update
+
+  [ 2015-06-15  Michael Oborne  <meee146@gmail.com> ]
+  * ConfigRadioInput: layout bind buttons
+
+  [ 2015-06-15  Eugene Shamaev  <Eugene.Shamaev@gmail.com> ]
+  * Added buttons and logic for binding of receover
+
+  [ 2015-06-15  Michael Oborne  <meee146@gmail.com> ]
+  * fftui: add hz/rpm to point values for easy diag
+  * fftui: modify freq detection for single imu
+  * fftui: modify to detect sample rate based on a larger sample set
+  * Code Cleanup
+  * switch back to .net 3.5 to prevent designer crash on hud
+  * Program: fix ref
+  * DistanceBar: catch draw exceptions
+  * LogBrowse: add extra null check
+  * Program: add user field in error report
+  * configradioinput: use default input positions if no rcmap params
+  * Mavlineinterface: fix default fallthrough
+
+  [ 2015-06-14  Michael Oborne  <meee146@gmail.com> ]
+  * Add simple gymbal support
+  * tweak mav type display
+  * remove simple gui
+  * mavlinkinterface: modify injectgps
+  * SerialInjectGPS: fix buffer size
+  * Currentstate: add vibration message
+
+  [ 2015-06-13  Michael Oborne  <meee146@gmail.com> ]
+  * ConfigRawParams: speed up
+  * Common: fix config curruption issue
+  * MAVLinkInterface: add unknown packet message
+  * LogBrowse: change line number to time
+  * MAVLink: update
+  * ConfigFriendlyParam: speedup screen draw time
+
+  [ 2015-06-09  Michael Oborne  <meee146@gmail.com> ]
+  * Static analysis fixs
+  * Update Solution
+  * change libs to .net 4.0
+  * LocationWP: add implicit conversion
+  * ConfigRawParamTree: fix typo
+  * Mainv2: adjust font size based on screen dpi
+
+  [ 2015-06-08  Michael Oborne  <meee146@gmail.com> ]
+  * .gitignore update
+  * flightplanner: remove duplicate code
+  * currentstate: rearrange fields
+  * GridUI: fix turn radius and do change speed for non meters
+
+  [ 2015-06-06  Michael Oborne  <meee146@gmail.com> ]
+  * Static analysis fixs
+  * Static Analysis fixs
+  * ProgressReporterDialogue: dispose form after use
+  * Update openfile/savefile dialog to prevent leak
+  * FlightPlanner: add measure distance notification
+
+  [ 2015-06-04  Michael Oborne  <meee146@gmail.com> ]
+  * MainV2: fix auto connect
+  * update default form language
+  * wizard: connect add firmware note
+  * ParamMetaDataRepo: scan multiple elements for valid paramname
+
+  [ 2015-06-04  Michael Oborne  <mich146@hotmail.com> ]
+  * ParamMetaData: update to fix dup xml entrys
+
+  [ 2015-06-03  Michael Oborne  <meee146@gmail.com> ]
+  * SITL: add joystick as direct rc input.
+  * LogOutput: fix rinex creation
+  * MainSwitcher: add exception handle for invalid controls
+  * wizard: accelcalib update to exclude init message #38
+  * px4uploader: add new vender cert
+
+  [ 2015-06-02  Michael Oborne  <meee146@gmail.com> ]
+  * FlightPlanner: hide clear roi
+  * fftui: add null check
+  * LogBrowse: use time as default
+  * currentstate: add pid feedback
+  * MAVLink: update library
+  * CollectionBuffer: fix index init
+  * srtm: fix file move
+  * Update Readme
+
+  [ 2015-06-02  Jaime Machuca  <jaime@droidika.com> ]
+  * Fix Rel vs AMSL Altitude Logic
+  * The use of relative altitude vs AMSL was reversed in relation to the
+  * check box. If the “Use AMSL” check box is checked it should write AMSL
+  * to the pictures.
+
+  [ 2015-06-01  Michael Oborne  <meee146@gmail.com> ]
+  * srtm: remove 1 arc seconds data
+  * Currentstate: fix cast on sonar range
+  * currentstate: update sonarerange units #878
+  * Mavlinkinterface: send storage write 10 seconds after setparam #882
+  * AP_Terrain: add lib #573
+  * CurrentState: add terrain active flag #573
+  * CollectionBuffer: add bin support
+  * FlightData: only allow one async updateBindingSource
+
+  [ 2015-05-31  Michael Oborne  <meee146@gmail.com> ]
+  * currentstate:  add distfrommovingbase
+  * script: update example to include photo trigger
+  * SITL: add vs redist notice
+  * FlightData: Fix min windows size
+
+  [ 2015-05-31  四季天书SkiTiSu  <sjtsjjy@163.com> ]
+  * Localizations: update zh-Hans
+  * Localizations: let FW change to ConfigLang
+  * Strings: add AutoWP
+
+  [ 2015-05-30  Michael Oborne  <meee146@gmail.com> ]
+  * airports.csv: update
+  * Aitports: add seaplane base filter
+  * MainV2: prevent system sleep while MP open
+  * SITL: kill process on exit
+  * SITL: add process kill.
+  * CurrentState: add imu2 to status tab
+  * MAVlinkCheckboxBitMask: add description and name
+  * Simulation: cleanup screen
+  * MavlinkBitmask: add support
+
+  [ 2015-05-29  Michael Oborne  <meee146@gmail.com> ]
+  * Mainv2: update portname when started from place other than button press
+  * sysidselector: apply theme
+  * ResEdit: update to include strings in resedit
+  * SITL: add loading dialog
+  * SITL: User interface
+  * FlightPlanner: cleanup old grid code
+  * DFLog: add clear function, and reset on each log load
+
+  [ 2015-05-28  Michael Oborne  <meee146@gmail.com> ]
+  * FlightData: fix mnt param name
+  * GimbalPoint: allow to run when not connected
+  * MAVLinkinterface: add params from stream
+  * FlightData: add resume mission button
+  * Currentstate: add prev wpno saving
+
+  [ 2015-05-27  Michael Oborne  <meee146@gmail.com> ]
+  * DFLog: add timeus to other messages
+  * DFLog: add timeUS to base time calc
+  * DFLog: update for new gps time field names
+  * LogBrowse: add timeus support to drawtime
+  * CollectionBuffer: implement Clear()
+  * BinaryLog: dont decode data we dont know about
+  * BinaryLog: add uint64 and int64
+  * Flightdata: add storm32 to gymbalpoint filter
+
+  [ 2015-05-26  Michael Oborne  <meee146@gmail.com> ]
+  * LogBrowse: add DrawTime to startup
+  * LogBrowser: speedup DrawMap creation
+  * MavlinkNumericUpDown: add ability to set out of range value
+  * LogBrowse: add simple progress to df log graph (console)
+  * CollectionBuffer: improve performance
+
+  [ 2015-05-26  Michael Oborne  <mich146@hotmail.com> ]
+  * fft: add new graph style
+
+  [ 2015-05-26  Michael Oborne  <meee146@gmail.com> ]
+  * MissionPlanner 1.3.28
+  * fftui: change to higher data rate data
+  * currentstate: remove ekf error flags
+  * fft: auto detect sample rate
+
+  [ 2015-05-25  Michael Oborne  <meee146@gmail.com> ]
+  * ConfigRadioInput: fix min/max lines and loading settings #883 #884
+  * temp: add fft button
+  * FFT Gui and update
+  * FFT library
+  * currentstate: ekf status update
+  * Plugins: cleanup
+  * LogAnalyzer: add to MP git
+
+  [ 2015-05-22  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.27
+  * ParameterMetaData: update backup data
+  * ConfigArducopter: update FF param names #876
+  * update .gitignore
+  * temp: remove vlctotexture
+  * ConfigAccelPlane: remove 1d accel calib
+  * CommsSerialScan: update to allow cancel/exit
+
+  [ 2015-05-20  Michael Oborne  <meee146@gmail.com> ]
+  * changelog
+  * MissionPlanner 1.3.26
+
+  [ 2015-05-19  Michael Oborne  <meee146@gmail.com> ]
+  * logbrowse: add time base to log browser #872
+
+  [ 2015-05-18  Michael Oborne  <meee146@gmail.com> ]
+  * georefimage: fix coloum label order #873
+  * Strings: update
+
+  [ 2015-05-18  Michael Oborne  <meee146@gmail.com> ]
+  * Localization: update ConfigFM zh-Hans translation
+  * Localization: update ConfigMotorTest zh-Hans
+
+  * Localization: update ConfigFS/3DRradio zh-Hans
+
+  * FlightData: fix zh-Hans text place
+
+  * FlightData: add auto scroll and scrollbar for Messages
+
+  * Strings: add AutoWP
+
+  [ 2015-05-18  Michael Oborne  <meee146@gmail.com> ]
+  * logoutput: add sbas obs header
+  * currentstate: add ekfstatus
+
+  [ 2015-05-17  Michael Oborne  <meee146@gmail.com> ]
+  * LogOutput: dont create rinex file if no obs
+  * LogOutput: create rinex file if obs data present
+
+  [ 2015-05-15  Michael Oborne  <meee146@gmail.com> ]
+  * Scripts: add another python example
+  * DFLog: improve time calc, and gps msg filter
+
+  [ 2015-05-14  Michael Oborne  <meee146@gmail.com> ]
+  * mavlinkinterface: add cmd line on connect
+  * SerialInjectGPS: add ntrip
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * FlightPlanner: fix freeze on add bellow
+  * Script: update example 2
+
+  [ 2015-05-13  Michael Oborne  <mich146@hotmail.com> ]
+  * LogBrowse: update message type scanning to scan the first 500000, from 30000
+
+  [ 2015-05-13  Tom Pittenger  <magicrub@gmail.com> ]
+  * Log: fixed bug when offset is added before scalar
+
+  [ 2015-05-12  Michael Oborne  <meee146@gmail.com> ]
+  * update solution to remove old projects
+  * CurrentState: add csCallBack
+  * ParameterMetaData: add rebootrequired
+  * BinaryLog: add double support
+  * MainV2: add connection options
+
+  [ 2015-05-11  Michael Oborne  <meee146@gmail.com> ]
+  * currentstate: ignore date exception
+
+  [ 2015-05-10  Michael Oborne  <meee146@gmail.com> ]
+  * Capture: allow fall back to default capture options
+  * MavlinkParse: fix offset start on split read
+  * MavlinParse: fix runaway read
+  * mavlinparse: fix timeout issue
+  * StreamCombiner: update to use mavlinkparse
+  * Mainv2: make doConnect more generic
+  * TerrainFollow: make interface specific
+  * Currentstate: change requestdatastreams to 30 sec interval
+  * Mainv2: fix mavlinkversion in hb
+  * streamcombiner: use packetreader to prevent bad packets
+  * MAvlininterface: add infinity check to hzratecheck
+  * MavlinkParse: add reader function
+
+  [ 2015-05-08  Michael Oborne  <meee146@gmail.com> ]
+  * script: add rc - heli. arm and takeoff script
+  * SerialInjectGPS: update to allow more input sources
+  * temp: modify arm and takeoff button
+  * MainV2: cleanup read code
+  * Currentstate: specify sysid when requesting datastream
+  * StreamCombiner: modify to set sysid's
+  * MavlinkInterface: move requestDatastream packet stats to per MAV
+  * Mainv2: get all params on connect
+  * mavlinkinterface: add sysid to param list dialog
+  * flightdata: fix bintolog conversions directory #854
+
+  [ 2015-05-07  Michael Oborne  <meee146@gmail.com> ]
+  * MultiMav: update
+
+  [ 2015-05-04  Michael Oborne  <meee146@gmail.com> ]
+  * temp: give fresh look
+  * mainv2: make sysidselector always topmost, and non modal
+  * currentstate: add sitl speedup value
+  * mavlinkinterface: fix bad packet count bug (when multi mav)
+  * GMapMarkerQuad: add sysid and display
+  * flightdata: add do-set-home support on flightdata #846
+  * flightdata: make status tab text wider #860
+
+  [ 2015-05-03  Michael Oborne  <meee146@gmail.com> ]
+  * temp: add arm and takeoff button
+  * droneshare: change to private as default
+  * CommsFile: add read exception when not connected
+  * mavlinklog: fixup custom log items
+  * Flightdata: add takeoff connected check, and capture traveled path when scre
+  * Spline2: change to use dt
+
+  [ 2015-05-02  Michael Oborne  <meee146@gmail.com> ]
+  * SITL: fix quad home alt
+
+  [ 2015-05-01  Michael Oborne  <meee146@gmail.com> ]
+  * googlesatallitemaps: version update
+
+  [ 2015-04-30  Michael Oborne  <meee146@gmail.com> ]
+  * georefimage: add image time offset for each image when using cam sync #856
+  * SerialInjectGPS: add new form to inject data
+  * droneshare: upload change
+  * Strings: move strings to resource
+  * Mavlinkinterface: add InjectGPSData
+
+  [ 2015-04-29  Michael Oborne  <meee146@gmail.com> ]
+  * georefimage: add bin support #855
+  * Flightdata: add ability to convert multiple bins to logs in one hit #854
+
+  [ 2015-04-28  Michael Oborne  <meee146@gmail.com> ]
+  * CurrentState: add voltage flags
+  * HIL: update for sitl quad lockstep
+  * Common: add target heading to AT icon
+
+  [ 2015-04-27  Michael Oborne  <meee146@gmail.com> ]
+  * Grid: add leadin and cleanup
+  * Common: add AT servo_test mode
+  * Common: fix antenna tracker heading
+  * Simulation: change timing structure
+  * Simulation: get sitl working with jsbsim
+  * Mavlinklog: add ability to offset a log from its home alt (shift key on kml 
+  * Simulation: add sitl timestep (no realtime)
+  * FlightPlanner: add modifyalt exception handle
+  * GMapControl: allow int overflow on polygon draw
+  * DistanceBar: add resize 0 checks
+  * MainSwitcher: invoke creation on gui thread
+  * LogMap: add log open file share
+  * MainSwitcher: add null control check
+
+  [ 2015-04-25  Michael Oborne  <meee146@gmail.com> ]
+  * mavcmd: add loiter to alt
+  * Mavlink: lib update
+  * georef: add relative basealt option
+  * mavlinklog: update kml creation to use home alt + rel alt
+
+  [ 2015-04-23  四季天书SkiTiSu  <sjtsjjy@163.com> ]
+  * Localization: optimize HUD translations
+  * and add SimplePids notes translation
+  * ConfigMount: fix wiki link and zh-Hans translation
+
+  [ 2015-04-23  Michael Oborne  <meee146@gmail.com> ]
+  * Log: DoubleClick log item to apply user-defined offset and scalar
+  * When plotting data it is sometimes nice to add a scalar and/or an offset. Go
+  * Any DataFlash .bin/.log logged value can have an arbitrary scalar and/or off
+  * Enter modifier then value, they are applied in the order you provide. Modifi
+  * Example: Convert cm to to m with an offset of 50: '/100 +50' or 'x0.01 +50' 
+
+  * Log: Optimize constructor for faster graphing
+
+  [ 2015-04-22  Michael Oborne  <meee146@gmail.com> ]
+  * mybutton: add colour change invalidate
+
+  [ 2015-04-21  Michael Oborne  <meee146@gmail.com> ]
+  * MissionPlanner 1.3.25
+  * configframetype: update
+  * configrawparam: modify load/save button text
+  * hud video: add vlc test
+
+  [ 2015-04-21  Michael Oborne  <mich146@hotmail.com> ]
+  * HUD: fix bgimage whiteout
+
+  [ 2015-04-21  Michael Oborne  <meee146@gmail.com> ]
+  * mainv2: add plugin load skip (shift key)
+
+  [ 2015-04-20  Michael Oborne  <meee146@gmail.com> ]
+  * Mainv2: make menu panel public
+  * Coords: add ability to change unit test
+  * travis
+  * firmware: change url null to blank check
+  * flightplanner: autoresize Columns on panel expand
+  * SoftwareConfig: make sure theme applys to children
+  * Missionplanner: remove old defines
+  * firmware: add url null check
+  * simulation: add default init of sitl quad to home location
+  * configarducopter: fix tune high and low scale #839
+
+  [ 2015-04-18  Michael Oborne  <meee146@gmail.com> ]
+  * add travis
+  * mainv2: add error logging
+  * joysticksetup: fix warnings
+  * utils: update speech lib
+  * mavlinkcombobox: add subcontrol support
+  * simulation: add jsbsim step
+
+  [ 2015-04-17  Tom Pittenger  <magicrub@gmail.com> ]
+  * Uploader: segmented enum values and moved others to consts due to improper e
+
+  [ 2015-04-15  Michael Oborne  <meee146@gmail.com> ]
+  * flightplanner: better handle land command display
+  * Distancebar: fix double buffer
+
+  [ 2015-04-14  Michael Oborne  <meee146@gmail.com> ]
+  * jsbsim: update config to match sitl
+  * firmware: fix <= board version
+  * jsbsim: update
+
+  [ 2015-04-13  Michael Oborne  <meee146@gmail.com> ]
+  * mavcmd: add DO_DIGICAM_CONTROL and DO_DIGICAM_CONFIGURE #841
+
+  [ 2015-04-12  Michael Oborne  <meee146@gmail.com> ]
+  * scripts: add more sample python scripts
+  * firmware: update firmware version no is pulled from, and add arducopter on a
+  * confighwsonar: cleanup unused var
+  * distancebar: enable double buffer
+  * mavlink: update library
+
+  [ 2015-04-11  Michael Oborne  <meee146@gmail.com> ]
+  * georefimage: add null check
+  * configmotortest: add exception message
+  * firmware: fix extra ;
+  * Mainv2: fix light/dark icons
+  * configplanner: fix startup flag
+  * mainv2: change logsort/maps order
+  * logsort: cleanup and move by filename filter
+
+  [ 2015-04-06  Michael Oborne  <meee146@gmail.com> ]
+  * Missionplanner: fix version.txt creation
+  * Mission Planner 1.3.24
+  * MainV2: change plugin load order
+  * update: do a blank string check on update
+  * flightplanner: fix wp upload issue when 2 wp's have the same values #829
+  * HUD: create more turn off options
+  * Mainv2: rearrange startup
+  * missionplanner: update post build event
+
+  [ 2015-04-05  Michael Oborne  <meee146@gmail.com> ]
+  * quickview: modify docking to prevent flicker
+  * Grid: add turn dia
+
+  [ 2015-04-03  Michael Oborne  <meee146@gmail.com> ]
+  * Gimbalpoint: new geopoint calc using srtm alt
+  * rangecontrol: width tweaks
+  * resources: make public
+  * HUD: cleanup and option parts
+  * GimbalPoint: update code
+
+  [ 2015-04-01  Michael Oborne  <meee146@gmail.com> ]
+  * flightplanner: fix no display of some mav_cmds based on recent 0 check chang
+  * flightplanner: show 0 lats and 0 longs on map
+  * gmaproute: add better stroke handleing
+  * mavlinkinerface: add connected check to param fetch
+  * airports: update airports
+  * GMappolygon: fix null reference
+
+  [ 2015-03-31  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.23
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * flightplanner: fix posible missed wp on lossy link #823
+
+  [ 2015-03-31  Escadrone  <contact@escadrone.com> ]
+  * Add satcount and GPS HDOP to 3O second interval speech synthesis.
+
+  [ 2015-03-31  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.22
+
+  [ 2015-03-30  Michael Oborne  <meee146@gmail.com> ]
+  * GMapPolyon: fix exception
+
+  [ 2015-03-29  Michael Oborne  <meee146@gmail.com> ]
+  * flightplanner: fix reading saved wp file with more than 255 wp's
+  * opengltest: update
+  * joystick: do repeat servo, fix pwm max #822
+
+  [ 2015-03-28  Michael Oborne  <meee146@gmail.com> ]
+  * mavlinkinterface: cleanup debug
+  * mavlinkinterface: workaround for 3dr radio dup seqnos
+
+  [ 2015-03-27  Michael Oborne  <meee146@gmail.com> ]
+  * droneshare: update
+
+  [ 2015-03-26  Michael Oborne  <meee146@gmail.com> ]
+  * configarducopter: fix ch7/ch8 and tune combobox
+  * mainswitcher: fix for crossthread screenchange
+
+  [ 2015-03-25  Michael Oborne  <meee146@gmail.com> ]
+  * commsserialport: add null exception check
+  * gmapcontrol: add resize exception handle
+  * configbatterymonitor: give more text space
+  * configmotortest: add another button for tricopters
+
+  [ 2015-03-24  Michael Oborne  <meee146@gmail.com> ]
+  * simulation: fix sitl/hil
+  * flightplanner: fix terrain wp readback
+
+  [ 2015-03-23  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.21
+
+  [ 2015-03-22  Michael Oborne  <meee146@gmail.com> ]
+  * joystick: add button axis #815
+  * configarducopter: mod min max #818
+  * flightplanner: tweak multi point move
+
+  [ 2015-03-21  Michael Oborne  <meee146@gmail.com> ]
+  * flightplanner: initial multi move (use control key)
+  * flightplanner: add undo
+  * 3drradio: fix string reference
+  * mavlinkinterface: factor out setwp
+  * flightplanner: function out datagrid population
+
+  [ 2015-03-18  Michael Oborne  <meee146@gmail.com> ]
+  * Joystick, Radio, add exception handling.
+
+  [ 2015-03-17  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.20
+
+  [ 2015-03-16  Michael Oborne  <meee146@gmail.com> ]
+  * currentstate: add ch9-16 in
+
+  [ 2015-03-06  Michael Oborne  <meee146@gmail.com> ]
+  * firmwarehistory: update
+  * flightplanner: fix dragging home exception
+  * wizard:optionalhw update pram name
+  * confighwsonar: update to new param name
+  * currentstate: arrange gps info together
+  * Uploader: add get_chip command
+  * configmotortest: add duration option #796
+  * mavlinkinterface: fix getwpcount bug #805
+
+  [ 2015-03-06  Vitaliy  <velnik@gmail.com> ]
+  * *: Optimize checked BackColor
+  * *: forms "Display this"
+
+  [ 2015-03-06  SkiTiSu  <sjtsjjy@163.com> ]
+  * Localization: update HUD translation
+  * Locallization: update Params zh-Hans translation
+  * Config: add UTF-8 support
+  * Localization: fix Wizard zh-Hans translation
+  * Localization: update Wizard zh-Hans translation
+
+  [ 2015-03-06  Michael Oborne  <meee146@gmail.com> ]
+  * mavlinkinterface: add setparam debug logging
+  * configarducopter: update to use new controls, and paramnames
+  * mavlinknumericupdown: add post value update, auto min,max, and multiple para
+  * gmapmarkerairport: disable at low zoom levels
+
+  [ 2015-03-04  Michael Oborne  <meee146@gmail.com> ]
+  * flightplanner: fix wms layer request
+
+  [ 2015-02-27  Michael Oborne  <meee146@gmail.com> ]
+  * 3drradio: fix max transmit power for new radios
+
+  [ 2015-02-22  Michael Oborne  <meee146@gmail.com> ]
+  * common: modify get file from net to check last modified and file size
+  * mavlinkutil: implement more efficent bytetostruct method. (50% faster)
+
+  [ 2015-02-16  Michael Oborne  <meee146@gmail.com> ]
+  * pluginloader: fix path to all lower case
+
+  [ 2015-02-15  Michael Oborne  <meee146@gmail.com> ]
+  * common: add new gmapmarkerwp
+  * flightplanner: use new wpmarker and homename
+  * gridui: use new wpmarkers
+  * gmapmarkerairport: fix scale on zoomout
+  * configantennatrakcer: remove proxymode
+  * configantennatracker: remove proxy mode #799
+  * parammetadatebackup: update baseline param set
+
+  [ 2015-02-13  Michael Oborne  <meee146@gmail.com> ]
+  * flightplanner: use new dashstyle
+  * flightdata: use new dashstyle
+  * gridui: use new dashstyle
+  * gmaproute: add custom dashstyle
+
+  [ 2015-02-12  Michael Oborne  <meee146@gmail.com> ]
+  * kindex: add daily cache
+  * tfr: add daily cache
+
+  [ 2015-02-11  Michael Oborne  <meee146@gmail.com> ]
+  * georefimage: add a few estimates
+  * georefimage: add option to use offsets on just cam messages
+
+  [ 2015-02-09  Michael Oborne  <meee146@gmail.com> ]
+  * georefimage: fix GE kml networkload issue
+  * httpserver: tweak output
+  * sharpkml: fix folder
+
+  [ 2015-02-07  Michael Oborne  <meee146@gmail.com> ]
+  * WarningEngine: only alert when connected.
+  * mainv2: change adsb lock
+  * joystick: add raw input line. (no expo)
+  * horizontalprogressbar: seperate min max line draw
+  * flightdata: change adsb lock
+  * configreadioinput: prevent config if radio off #793
+
+  [ 2015-02-05  Michael Oborne  <meee146@gmail.com> ]
+  * DistanceBar: tweaks
+  * firmware: add bad dependancy error message on firmware upload
+  * configplanner: change excpetion to error message
+  * loganalyzer: handle malformed data better
+  * confighwbt: handle comport open exception
+  * gridui: fix error on 359 + start angle
+
+  [ 2015-02-05  SkiTiSu  <sjtsjjy@163.com> ]
+  * GMap: add MercatorProjectionGCJ
+
+  [ 2015-02-05  四季天书SkiTiSu  <sjtsjjy@163.com> ]
+  * Localization: move Update strings
+
+  [ 2015-02-05  SkiTiSu  <sjtsjjy@163.com> ]
+  * Localization: update InitalSetup zh-Hans translation
+  * Localization: update ConfigAC zh-Hans translation
+  * ConfigHWBT: add a Bluetooth module picture
+  * Multiple: update zh-Hans translation
+  * MagCalib: add zh-Hans translation
+  * GMap: fix GoogleChinaSatelliteMap
+  * RawParamsTree: fix diydrones/MissionPlanner#769
+  * Enable to change all columns' width in order to read the full params
+  * desc. by using the bottom scrollbar.
+
+  [ 2015-02-04  Michael Oborne  <meee146@gmail.com> ]
+  * 3drradio: update mavlinkserialport #785
+  * mavlinklog: fix remove from graph #790
+  * ExtGuided: new test plugin
+  * joysticksetup: preselect last joystick used
+  * configplanner: restore last video resolution
+  * flightdata: add autotune button
+
+  [ 2015-02-02  Michael Oborne  <meee146@gmail.com> ]
+  * mavlinkinterface: remove old arming method
+  * python example: upload mission
+
+  [ 2015-02-01  Michael Oborne  <meee146@gmail.com> ]
+  * gitignore: add ignore
+  * flightdata: default mode dropdown to auto
+
+  [ 2015-01-30  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.19
+
+  [ 2015-01-29  Michael Oborne  <meee146@gmail.com> ]
+  * grid: fix exception #784
+
+  [ 2015-01-25  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.18
+
+  [ 2015-01-24  Michael Oborne  <meee146@gmail.com> ]
+  * hud: reduce spin time and tweak image resize
+  * capturemjpeg: tweak object lifetime
+  * droneshare: fix messagebox type
+  * logdownloadmavlink: add droneshare exception
+  * logbrowse: add better cleanup on load/reload #782
+  * dflog: add line end trimming.
+
+  [ 2015-01-23  Michael Oborne  <meee146@gmail.com> ]
+  * mavcmd.xml: add MAV_CMD_NAV_CONTINUE_AND_CHANGE_ALT #776
+
+  [ 2015-01-23  四季天书SkiTiSu  <sjtsjjy@163.com> ]
+  * Update: add Chinese CDN Mirror
+  * ConfigFirmware: some warnings zh-Hans translation
+
+  [ 2015-01-23  Jesus  <wjaxxx@gmail.com> ]
+  * Survey Grid generation improvement. Alternating Lanes
+  * - Improve Grid generation by calculating closestLines to point by a
+  * perpendicular proyection
+  * - Add basic new feature to allow user to Alternate lanes. Useful for
+  * plane users as turn radius is increased.
+
+  [ 2015-01-20  Michael Oborne  <meee146@gmail.com> ]
+  * configraparamtree: cleanup
+  * mavlink: update from master mavlink repo
+  * mavlink: update
+  * mainv2: refresh screen on usb unplug #778
+  * tlogthumbnailhandler: remove console grab
+  * ConfigBatVoltage: bypass low pass #779
+
+  [ 2015-01-16  Michael Oborne  <meee146@gmail.com> ]
+  * MainV2: add rally point warning
+  * LogMap: create image for mavlink 0.9 logs
+  * MainSwitcher: update cleanup method
+
+  [ 2015-01-15  Michael Oborne  <meee146@gmail.com> ]
+  * wix: update installer for com registration
+  * httpserver: fix tracking value
+  * ConfigArducopter: remove hld_lon_p
+  * logindex: add .bin and .log
+  * Tracking: fix event value
+  * LogMap: add .log and .bin support
+  * tlogThumbnailHandler: first commit
+
+  [ 2015-01-14  Michael Oborne  <meee146@gmail.com> ]
+  * logbrowse: add more predefined graphs
+
+  [ 2015-01-13  Michael Oborne  <meee146@gmail.com> ]
+  * remove project
+  * Drivers
+
+  [ 2015-01-12  Michael Oborne  <meee146@gmail.com> ]
+  * Driver refresh
+
+  [ 2015-01-11  Michael Oborne  <meee146@gmail.com> ]
+  * Drivers: update
+
+  [ 2015-01-10  Michael Oborne  <meee146@gmail.com> ]
+  * srtm: allow http exception to requestRunner
+  * distancebar: fix posible overflow error
+  * 3drradio: update urls for rfd900s
+
+  [ 2015-01-08  Michael Oborne  <meee146@gmail.com> ]
+  * srtm: return new altresponce on alt query
+  * configfirmware: add motor setup url
+  * RallyPoints: fetch on connect to AP
+
+  [ 2015-01-07  Michael Oborne  <meee146@gmail.com> ]
+  * Grid: fix time calc #774
+
+  [ 2015-01-06  Michael Oborne  <meee146@gmail.com> ]
+  * configarducopter: increase imax min/max #655
+  * flightplanner: remove snap zooming #690
+  * configarducopter: fix french translation #683
+  * mavcmd: add guided_limits #676
+  * flightdata: add colors to graph this dialog. #735
+  * configrawparamtreeview: turn off autocomplete #714
+
+  [ 2015-01-05  Michael Oborne  <meee146@gmail.com> ]
+  * grid: add delay to total time taken #716
+  * configaccelplane: add more warnings. #718
+  * mavlinklog: fix kml cdata close tag #733
+  * wizard: fix tri frame selection #738
+  * mainv2: make sure usb unplug is seen #744
+  * mavcmd: remove do_Set_home for copter #747
+  * currentstate: add optflow info #745
+  * confighwcompass: tweak posible bad error on mag dec input.
+  * mavcmd: add do_set_roi for plane. #763
+  * currentstate: fix posible bad home location #768
+  * configmotortest: update url #770
+  * FlightData: fix time based slowdown.
+
+  [ 2015-01-04  Michael Oborne  <meee146@gmail.com> ]
+  * mavlinkinterface: fix logplayback wp reading (gcs side)
+  * logdownloadmavlink: add scrollbar
+
+  [ 2015-01-02  Michael Oborne  <meee146@gmail.com> ]
+  * Revert "mavlinkinterface: change to use all component"
+  * This reverts commit 02960fb68ded5607b2ec6d553cc2aa07b7b796f9.
+
+  [ 2015-01-01  SkiTiSu  <sjtsjjy@163.com> ]
+  * Firmware: update CN mirror url
+  * Multiple: update zh-Hans translation
+  * GMAP: add AMap and localization for maps' names
+
+  [ 2015-01-01  Michael Oborne  <meee146@gmail.com> ]
+  * Hud: update to fail to gdi on first opengl command
+
+  [ 2014-12-31  Michael Oborne  <meee146@gmail.com> ]
+  * logdownloadmavlink: add scrollbar to log list
+  * px4uploader: add new public key
+  * mavlinkinterface: change to use all component
+  * comms: updserialconnect
+
+  [ 2014-12-30  Michael Oborne  <mich146@hotmail.com> ]
+  * Solution: fix build dependancys
+
+  [ 2014-12-30  Michael Oborne  <meee146@gmail.com> ]
+  * comms: udpserialconnect force initial connection
+  * Mainv2: add new udpserialconnect
+  * Comms: add udpserialconnect
+  * 3drradio: update note
+
+  [ 2014-12-28  Michael Oborne  <meee146@gmail.com> ]
+  * configfirmware: default back to ENG
+
+  [ 2014-12-28  SkiTiSu  <sjtsjjy@163.com> ]
+  * Strings: re-add some of Firmware
+  * bin2log: fix chinese appear at log's mode name
+
+  [ 2014-12-28  Michael Oborne  <meee146@gmail.com> ]
+  * mavlinkinterface: fix statustext bug
+  * flightplanner: add loaded wp filename
+  * logdownloadmavlink: add droneshare intergration
+  * mavlinkinterface: fix mav type detection on getheartbeat
+  * flightdata: fix distance bar
+
+  [ 2014-12-27  Michael Oborne  <meee146@gmail.com> ]
+  * logbrowse: use common map provider
+
+  [ 2014-12-26  Michael Oborne  <meee146@gmail.com> ]
+  * wizard accel: fix exception
+
+  [ 2014-12-25  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.17
+  * confighwbt: fix retry on invalid baud
+  * airport: update list from ourairports.com
+  * mavlinkinterface: update to use new strings
+  * Strings: move more strings
+  * mavlinkinterface: implement both arm methods
+  * Kindex: update to use new url
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * MainV2: move strings
+  * Terminal: update terminal note
+
+  [ 2014-12-24  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #757 from gitter-badger/gitter-badge
+  * Add a Gitter chat badge to README.md
+
+  [ 2014-12-24  The Gitter Badger  <badger@gitter.im> ]
+  * Added Gitter badge
+
+  [ 2014-12-24  Michael Oborne  <meee146@gmail.com> ]
+  * confighwbt: fix order of commands
+  * confighwbt: program a hc-06
+
+  [ 2014-12-22  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #749 from virtualrobotix/for_merge
+  * Added new board VR Brain 5.2: detection, driver and upload firmware
+
+  [ 2014-12-22  Michael Oborne  <meee146@gmail.com> ]
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * DistanceBar: add trial
+
+  [ 2014-12-18  Michael Oborne  <mich146@hotmail.com> ]
+  * cleanup unused vars
+
+  [ 2014-12-18  Michael Oborne  <meee146@gmail.com> ]
+  * GStreamerHud: Testing
+
+  [ 2014-12-18  Emile Castelnuovo  <emile.castelnuovo@gmail.com> ]
+  * Firmware.cs: Added VRBRAIN 5.2 and corrected conflicts after rebase.
+
+  [ 2014-12-18  LukeMike  <luca.micheletti.laser@gmail.com> ]
+  * Added new board VR Brain 5.2: detection, driver and upload firmware
+
+  [ 2014-12-17  Michael Oborne  <meee146@gmail.com> ]
+  * Firmware: add failure logging
+  * SimpleExample: add simple example
+  * Mavlinparse: add parser
+  * ConfigHWBT: wip.
+
+  [ 2014-12-16  Michael Oborne  <meee146@gmail.com> ]
+  * Translation: move some strings, cleanup
+
+  [ 2014-12-15  Michael Oborne  <meee146@gmail.com> ]
+  * FlightData: update to use dotted line on flightdata
+  * MAVLinkinterface: change arm/disarm to use current target id
+  * LogBrowse: add ability to open very large logfiles (300mb bins)
+  * CollectionBuffer: improve performance
+
+  [ 2014-12-14  Michael Oborne  <meee146@gmail.com> ]
+  * Firmware: add chinese CDM Mirror by SkiTiSu
+
+  [ 2014-12-13  Michael Oborne  <meee146@gmail.com> ]
+  * PluginLoader: add plugin fail logging
+  * csproj: cleanup dependancys
+  * MAVLink Log - add tlog fn to title bar
+
+  [ 2014-12-10  Michael Oborne  <meee146@gmail.com> ]
+  * CollectionBuffer: make work for strings
+  * ConfigFirmware: add licence details
+  * configrawparamtree: add exception check on reset
+  * LogBrowse: exception handle on no data on rowpaint
+  * FlightData: add avi close exception handle
+  * ConfigRawParam: exception check values on save
+  * Joystick: add exception check to rcoverrideclear
+  * Mainv2: fix log map create exception
+  * joystick: fix load config path
+  * TFR: change fill color
+
+  [ 2014-12-09  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.16
+  * KIndex fix
+
+  [ 2014-12-09  SkiTiSu  <sjtsjjy@163.com> ]
+  * CommsSerialPort: fix an error
+  * declare can't be put in "try"
+  * Strings: update zh-Hans translation
+  * Some works for localization
+  * and update zh-Hans param xml
+  * Let more texts support muilt language
+  * and update SC translations
+
+  [ 2014-12-09  Michael Oborne  <meee146@gmail.com> ]
+  * KIndex: implement kindex
+
+  [ 2014-12-07  Michael Oborne  <meee146@gmail.com> ]
+  * Multiple: Exception checks
+  * Multiple: add exception handles
+
+  [ 2014-12-06  Michael Oborne  <meee146@gmail.com> ]
+  * mavlinkinterface: reinstate request param list
+  * MAVLinkInterface: modify parameter get when packets are lost
+  * 3drradio standalone: changelog dates
+  * FlightPlanner: remove unused code
+  * tfr: add exception handle
+  * 3drradio standalone: update changelog
+
+  [ 2014-12-05  Michael Oborne  <meee146@gmail.com> ]
+  * 3drradio: switch back to static strings
+  * paramcompare: fix typo
+  * 3DRRadio: update for 900u
+
+  [ 2014-12-04  Michael Oborne  <mich146@hotmail.com> ]
+  * Strings: add some localization
+
+  [ 2014-12-01  Michael Oborne  <meee146@gmail.com> ]
+  * ElevationGraph: add terrain follow
+  * MeasureString: add null check
+  * tfr: fix crossthread call on load
+
+  [ 2014-11-30  Michael Oborne  <meee146@gmail.com> ]
+  * mavcmd: update loiter_turns
+  * thememanager: fix alternate row colour on other themes
+  * flightplanner: turn on autosize on all coloums
+  * winddir: autoscale max speed
+  * configaccelplace: add warning about only doing 1 of the 2 calibs
+  * georef: fix field reverse #727
+  * mavcmd: update to display do_land_start
+  * TFR: allow enable/disable of tfrs
+
+  [ 2014-11-30  Jaime Machuca  <jaime@droidika.com> ]
+  * Support for TetraCAM Time offset Geotagging
+  * TetraCAM Pixel Wrench does not embed the DateTimeOriginal (0x9003) meta
+  * tag, it uses instead DateTimeDigitized (0x9004). This change will look
+  * for that tag if the DateTimeOriginal Tag is not found.
+
+  [ 2014-11-30  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #721 from virtualrobotix/for_merge
+  * Some modification for VRBRAIN 4 and 5 boards.
+
+  [ 2014-11-30  四季天书SkiTiSu  <sjtsjjy@163.com> ]
+  * Add Flight Mode 16
+
+  [ 2014-11-30  SkiTiSu  <sjtsjjy@163.com> ]
+  * Update ParameterMetaDataRepository.cs
+  * Now it can load the elements the Chinese xml doesn't exist.
+  * update Simplified Chinese translation
+
+  [ 2014-11-29  Michael Oborne  <meee146@gmail.com> ]
+  * flightdata: move tfr to its own layer
+  * firmwarehistory: update
+  * mavlinkinterface: trigger camera only once. #731
+
+  [ 2014-11-28  LukeMike  <luca.micheletti.laser@gmail.com> ]
+  * VRBRAIN: added and updated drivers for all VRX boards
+  * VRBRAIN: inhibited the message of waiting of musical tones after firmware's 
+  * VRBRAIN: added recognition and management of boards VR Micro Brain 5.2, VR G
+
+  [ 2014-11-28  Emile Castelnuovo  <emile.castelnuovo@gmail.com> ]
+  * FirmwareUpload: VRBRAIN added board detection for VRBRAIN 4. Changed message
+  * ConfigBatteryMonitoring: Added VRBRAIN4 board pins and corrected VRBRAIN 5 a
+
+  [ 2014-11-28  Michael Oborne  <meee146@gmail.com> ]
+  * code cleanup.
+
+  [ 2014-11-27  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #729 from virtualrobotix/master_proxy
+  * Added DefaultWebProxy to WebRequest to use IE default settings.
+
+  [ 2014-11-27  Emile Castelnuovo  <emile.castelnuovo@gmail.com> ]
+  * Added DefaultWebProxy to WebRequest to use IE default settings. This will al
+
+  [ 2014-11-26  Michael Oborne  <meee146@gmail.com> ]
+  * flightdata: preflight_calib, only set gyro calib on copter
+
+  [ 2014-11-25  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.15
+
+  [ 2014-11-24  Michael Oborne  <meee146@gmail.com> ]
+  * MainV2: add null check on threads on exit
+  * wizard: compasscalib, add exception handle
+  * Currentstate: add laser positon health message
+  * MAVLink: update upstream lib
+
+  [ 2014-11-23  Michael Oborne  <meee146@gmail.com> ]
+  * progressreportersphere: enable autcomplete by default, remember option betwe
+
+  [ 2014-11-22  Michael Oborne  <meee146@gmail.com> ]
+  * tfr: update to individual shapes (wip)
+  * progresssphere: fix autocomplete logic bug
+
+  [ 2014-11-20  Michael Oborne  <meee146@gmail.com> ]
+  * logbrowse: move map clear inside exception handle
+
+  [ 2014-11-19  Michael Oborne  <meee146@gmail.com> ]
+  * ConfigSimplePid: convert to invariant culture
+  * MissionPlanner 1.3.14: remove tfr
+
+  [ 2014-11-18  Michael Oborne  <meee146@gmail.com> ]
+  * magcalib: reset error terms on each run
+  * Joystick: add mount_control_0
+  * update changelog
+  * magcalib: add mag2 0's check
+  * MissionPlanner 1.3.13
+  * magcalib: add new hitcount target, and default autcompelte to off
+  * configarducopter: add heli FF's
+
+  [ 2014-11-17  Michael Oborne  <meee146@gmail.com> ]
+  * magcalib: use new force param to set compass 2 offsets
+  * mavinterface: add ability to force a param upload
+  * magcalib: add option to not autocomplete
+  * TFR: add tfr
+
+  [ 2014-11-15  Michael Oborne  <meee146@gmail.com> ]
+  * mavcmd: update do_repeat_relay and do_set_relay
+  * CurrentState: update dist to home to be 0 if home is 0
+  * MagCalib: modify completion trigger, and change instructions
+  * configcompassmot: add exception handle around deactivate, not sure how this 
+  * MissionPlanner 1.3.12
+  * FlightData: fix quickview sizeing
+  * FlightData: remove FP autopan.
+  * Fix language issues
+
+  [ 2014-11-14  Michael Oborne  <meee146@gmail.com> ]
+  * flightdata: make tuning graph this higher.
+  * srtm&terrainfollow: add ability to detect ocean tiles
+  * flightdata: PREFLIGHT_CALIBRATION do gyro cal as well
+  * mavcmd.xml remofe ROI
+  * ConfigFailSafe: section up failsafe screen
+  * georefimage: fix for bad gps line
+  * FlightPlanner: add cancel code to getwps
+  * Mainv2: add fw version to titlebar
+  * flightdata: add disarm confirmation
+
+  [ 2014-11-13  Michael Oborne  <meee146@gmail.com> ]
+  * mavlinkinterface: add other radio status packet to current mav
+
+  [ 2014-11-12  Michael Oborne  <meee146@gmail.com> ]
+  * Plugins: fix units
+  * Fix Unit scaling.
+  * WarningManager: fix to us correct currentstate
+  * MAVLinkInterface: make sure radio packets are seen on active mav
+  * currentstate: fix unit conversion
+  * configcompassmot: fix compassmot issue
+  * update drivers
+  * MavlinkLog: make more efficient and add treeview
+
+  [ 2014-11-09  Michael Oborne  <meee146@gmail.com> ]
+  * paramatermetadatabackup: update
+  * MissionPlanner 1.3.11
+  * magcalib: adjust loop sleep time
+
+  [ 2014-11-06  Michael Oborne  <meee146@gmail.com> ]
+  * magcalib: add autocomplete, speech/beep and error term.
+  * mavlinkinterface: add fence get idx verify
+  * logbrowse: increase max zoom level
+  * confighwcomapss: fix compile error
+
+  [ 2014-11-02  Michael Oborne  <meee146@gmail.com> ]
+  * mavlinkinterface: fix posible accept a bad missionitem that is delayed
+
+  [ 2014-10-22  Michael Oborne  <meee146@gmail.com> ]
+  * InitialSetup: move compass cal below accel cal
+  * confighwcompass: move live calibration to bottom
+
+  [ 2014-10-20  Michael Oborne  <meee146@gmail.com> ]
+  * utmpos: add gethashcode function
+  * MAVLinkserialport: change default timeout to 10ms
+  * MetaData: update backup meta data
+  * MAVLink: update library
+  * Mainv2: prevent loading bad home location
+
+  [ 2014-10-19  Michael Oborne  <meee146@gmail.com> ]
+  * RangeControl: fix orange highlighting #654
+  * add land complete maybe #663
+  * MAVLinkinterface: fix posible exclusive issue
+  * cleanup warnings
+  * AntennTrackerIcon: add heading display
+  * configantennatracker: fix test button, and dropdowns
+  * mavlinkNumericUpDown: add auto decimal places
+  * move packetloss counters
+  * MAVLinkserialport: modify to use a thread
+
+  [ 2014-10-11  Michael Oborne  <meee146@gmail.com> ]
+  * Multiple: multiple sysids on 1 link
+  * MovingBase: set rally total if enabled
+  * currentstate: reinstate rc receiver message
+  * mavlinkinterface: make sure aptype is set from log/serial
+
+  [ 2014-10-10  Michael Oborne  <meee146@gmail.com> ]
+  * FlightData: display all connected mavs
+  * ConfigAntennaTracker: fix increments
+  * ConfigAntennaTracker: initial extended tuning
+  * Backstate: add scrollbars
+  * mavinterface: add mavchanged event
+  * GridUI: add units to simple screen
+  * currentstate: remove debug
+  * px4uploader: do otp check only once
+
+  [ 2014-10-08  Michael Oborne  <meee146@gmail.com> ]
+  * sysid selection
+
+  [ 2014-10-03  Michael Oborne  <meee146@gmail.com> ]
+  * mavlinkinterface: fix geofence upload verification check
+  * flightplanner: fix null exceptions on no home
+
+  [ 2014-10-02  Michael Oborne  <mich146@hotmail.com> ]
+  * Currentstate: modify binding source method
+
+  [ 2014-10-01  Michael Oborne  <meee146@gmail.com> ]
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * update to use antenna tracker icon on map
+  * common: add antenna tracker icon
+
+  [ 2014-10-01  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #660 from SkiTiSu/master
+  * Update Simplified Chinese Translation
+  * Merge pull request #662 from mmiers/pull-req
+  * Add Maestro speed/accel parameters
+
+  [ 2014-10-01  Mitch Miers  <mmiers@mmiers.com> ]
+  * Add Maestro speed/accel parameters
+  * The Maestro API includes these parameters, but the values appear
+  * pinned at speed=100 accel=5.
+
+  * This patch adds new fields, active only when Maestro is selected,
+  * for the speed and accel parameters for pan and tilt.
+
+  * Fixed (?) the tab order while I was in there.
+
+  [ 2014-10-01  Michael Oborne  <meee146@gmail.com> ]
+  * MAVLinkinterface: prep for multiple sysids on 1 link
+
+  [ 2014-10-01  SkiTiSu  <sjtsjjy@163.com> ]
+  * Update Simplified Chinese Translation
+
+  [ 2014-09-29  Michael Oborne  <meee146@gmail.com> ]
+  * python example 2: add parameter fetch
+  * mavlink: add frametype storing
+
+  [ 2014-09-27  Michael Oborne  <meee146@gmail.com> ]
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * WarningManager: add theme, and item remove
+  * Joystick: modify expo function
+
+  [ 2014-09-26  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #656 from EllisSu/master
+  * update TC translation
+
+  [ 2014-09-26  ellissu  <ellissu@gmail.com> ]
+  * update TC translation
+
+  [ 2014-09-26  Michael Oborne  <meee146@gmail.com> ]
+  * Currentstate: update lat2lng2 to double, update lat/lng sig figures when com
+
+  [ 2014-09-24  Michael Oborne  <meee146@gmail.com> ]
+  * WarningManager: add child support. (WIP)
+  * Flightplanner: fix mapcontrol name
+  * FlightPlanner: add autopan to FP
+
+  [ 2014-09-23  Michael Oborne  <meee146@gmail.com> ]
+  * configflightmodes: add simple and super simple filter
+  * currentstate: move gps2 info, and make satcount2 visible/plotable
+
+  [ 2014-09-22  Michael Oborne  <meee146@gmail.com> ]
+  * HUD: remember hud show option on restart
+  * mavcmd: add do_gripper to command list for AC
+  * MAVLink: update library
+
+  [ 2014-09-21  Michael Oborne  <meee146@gmail.com> ]
+  * dflog: add out of memory error
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * fix , vs . issue #636
+
+  [ 2014-09-14  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #644 from digitalcraft/patch-1
+  * Fix GeoFence Breach Logic
+
+  [ 2014-09-14  digitalcraft  <jeff@digital8.com.au> ]
+  * Fix GeoFence Breach Logic
+  * When GeoFence is enabled, Mission Planner incorrectly displays "Geofence Bre
+
+  [ 2014-09-14  Michael Oborne  <meee146@gmail.com> ]
+  * update TC translation
+
+  [ 2014-09-13  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.10
+
+  [ 2014-09-12  Michael Oborne  <meee146@gmail.com> ]
+  * georef: add tiff support
+  * currentstate: add m to ft conversion on terrain alt
+  * FlightPlanner: fix m to feet conversion
+
+  [ 2014-09-11  Michael Oborne  <meee146@gmail.com> ]
+  * magcalib: add colours
+  * SpainMap: update main url
+  * Geofence: set fence_action to 0 before upload, and restore on finish
+  *  configfirmware: update 3.2 warning message
+
+  [ 2014-09-10  Michael Oborne  <meee146@gmail.com> ]
+  * ParameterMetaData: update to use stable or master on param meta data based o
+  * app.config: update metadata to always pull from stable branchs
+  * Capture: placeholder code for crossbar selection.
+  * ConfigPlanner: remember video device.
+  * flightplanner: make sline work from the grid interfaces
+
+  [ 2014-09-10  Michael Oborne  <mich146@hotmail.com> ]
+  * FlightPlanner: add distance check to dashed home line
+  * Merge pull request #605 from tristannovak/master
+  * Survey (Grid) Delay and HeadingHold Upgrades
+
+  [ 2014-09-10  Michael Oborne  <meee146@gmail.com> ]
+  * currentstate: add battery2 values
+  * mavlink: update library
+
+  [ 2014-09-09  Michael Oborne  <meee146@gmail.com> ]
+  * configbatterymonitor: update hv power module number
+  * matlab: reduce memory footprint more using file backed arrays
+
+  [ 2014-09-08  Michael Oborne  <meee146@gmail.com> ]
+  * matlab: deal with large bin files, output split mat files
+  * Binarylog: new function ConvertBin, and update users
+  * exception fix's
+
+  [ 2014-09-07  Michael Oborne  <meee146@gmail.com> ]
+  * exception fix's
+  * configmotortest: check frame param exists
+  * srtm: add comment
+  * magcalib: fix exception on mag calib from log on apm2
+  * gimbalpoint: add another check to determine if feature exists
+  * logbrowse: add another  presaved mechanical issue check
+  * joystick: add gimbal point track.
+  * flightdata: add gimbal point zero check
+  * mainv2: speedup gmaps cache on mp close
+
+  [ 2014-09-06  Michael Oborne  <meee146@gmail.com> ]
+  * opengltest2
+  * Flightdata: expand user item selection box
+
+  [ 2014-09-04  Michael Oborne  <meee146@gmail.com> ]
+  * Program: fix http get issues
+  * opengltest: update internals to public because unsigned
+
+  [ 2014-09-03  Michael Oborne  <meee146@gmail.com> ]
+  * opengltest: update
+  * FlightModes: add simple mode note
+  * Common: add {curr} to speech engine
+
+  [ 2014-09-02  tristannovak  <tristan@gpssoilsampling.com> ]
+  * Survey(Grid) Save "checked" for internals and footprints.
+  * User requested survey save the checked option.
+  * Survey (Grid) HeadingHold upgrade.
+  * The heading hold value will now adjust with the angle of the flight path.
+  * Survey (Grid).copter. Change waypoint delay. 	Delay increments are now .1 se
+  * FlightPlanner:
+  * 	Recenter map when loading poly from file.
+  * 	Change type of "p1" to accommodate for the delay change.
+
+  [ 2014-09-02  Michael Oborne  <meee146@gmail.com> ]
+  * ADSB: add custom server option #617
+
+  [ 2014-09-01  Michael Oborne  <meee146@gmail.com> ]
+  * Joystick: disable on error
+  * joystick: add connected check when a button is pushed on the joystick #623
+  * Mavlink: add code to prefer a non antenna tracker target. if one exists
+  * flightdata: fix status screen exception on first run
+  * joystick: send rcoverride of 0 on unplug. #624
+
+  [ 2014-08-31  Michael Oborne  <meee146@gmail.com> ]
+  * program: swich back to default http options
+  * gimbalpoint: update to use mount status message.
+  * joystick: add ability to toggle mount pan stab on and off
+  * initialsetup: accel fix tracker detection
+  * flightdata: fix map update issue
+  * srtm: update to use new data location
+
+  [ 2014-08-29  Michael Oborne  <meee146@gmail.com> ]
+  * srtm fix srtm alt. wrong average
+
+  [ 2014-08-28  Michael Oborne  <meee146@gmail.com> ]
+  * configaccel tracker: add ability to accel calib tracker
+
+  [ 2014-08-27  Michael Oborne  <meee146@gmail.com> ]
+  * POI: add null check on delete poi
+
+  [ 2014-08-26  Michael Oborne  <meee146@gmail.com> ]
+  * speedup application shutdown
+  * program: remove bad log analysis file
+  * update TC translation
+  * flightdata: fix log analysis from a bin file.
+  * flightdata: tweak thread join
+  * joystick mount mode: add description of modes
+  * joystick: add mount mode via joystick
+
+  [ 2014-08-25  Michael Oborne  <meee146@gmail.com> ]
+  * joystick: add takeoff via button
+  * flightplanner: fix mono exception
+  * Firmware: update antenna tracker icon
+  * add statkart_topo map for general use
+  * Main: update httpserver stop method to new api
+  * georef: add path list, and fix point alts
+  * httpserver: add stop method
+  * add statkart topo maps
+  * flightdata: fix termination, and mount exception
+  * adsb: fix termination
+
+  [ 2014-08-21  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.9
+
+  [ 2014-08-20  Michael Oborne  <meee146@gmail.com> ]
+  * firmware: add exception for when fwversions.xml doesnt exist
+  * tidy up unused varables.
+  * flightplanner: remove gimbalpoint unless mount settings fit
+  * currentstate: add sensors present check
+
+  [ 2014-08-19  Michael Oborne  <meee146@gmail.com> ]
+  * parametermetadata: update to support antennatracker
+  * configfirmware: placeholder for antennatracker
+  * flightplanner: update wp files to use correct frame type (terrain following)
+  * rawparamtree: error check number on input.
+  * flightplanner: update altmode to use mavlink enum
+  * configrawparam: add exception message on reset
+  * flightplanner: fix one missed altmode change
+  * configtreeview: fix save param file
+
+  [ 2014-08-19  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #595 from tristannovak/origincopy
+  * New Pull for Auto-Merge. Replaces pull #593
+
+  [ 2014-08-19  tristannovak  <tristan@gpssoilsampling.com> ]
+  * New Pull for Auto-Merge. Commits: Survey (Grid) Line Distance ToolTip + Hous
+  * [FIX] Survey (Grid) Beta 1.3.7.5 and Stable 1.3.8
+  * 0c2b276ebf71bea6b9f494d52f4d9721143ca4c6
+
+  * FlightPlanner -- Load polygon from shape file.
+  * 02780fd87c51f2a62281f8cc2834a79e0662adec
+
+  [ 2014-08-19  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.8
+
+  [ 2014-08-18  Michael Oborne  <meee146@gmail.com> ]
+  * flightplanner: add new frame selection
+  * uploader: remove code causing exception
+
+  [ 2014-08-17  tristannovak  <tristan@gpssoilsampling.com> ]
+  * FlightPlanner -- Render first and last flight line to home as "dashed".
+  * Issue: #584
+  * FlightPlanner - Click off menu to close. #583
+  * When "right click" menu is open, a left click on the map will close it witho
+  * Survey (Grid) Change WPNAV_SPEED back to default after mission.
+  * If [Use speed for Mission] is checked.
+  * And WPNAV_SPEED is available, Survey will add a DO_SET_SPEED equal to WPNAV_
+
+  [ 2014-08-17  Michael Oborne  <meee146@gmail.com> ]
+  * enum: add enumtolist option
+  * adsbplane: shrink from 59 to 40 pix
+  * droenshare: modify ssl profile for droneshare
+  * Threading: modify thread termination stratagy
+
+  [ 2014-08-17  ellissu  <ellissu@gmail.com> ]
+  * update TC translation.
+
+  [ 2014-08-17  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #576 from tristannovak/master
+  * Survey (Grid) Auto change units (Imperial) + other Upgrades/Fix
+
+  [ 2014-08-17  Michael Oborne  <meee146@gmail.com> ]
+  * sonar add exception check
+  * magcalib: 0 compass 2 before calib
+
+  [ 2014-08-17  tristannovak  <tristan@gpssoilsampling.com> ]
+  * Survey (Grid) Modify polygon.
+  * Users can now modify the shape of the polygon when in Survey (Grid)
+  * -- Ability to move existing points.
+  * -- Grid changes in realtime
+  * -- If [Accept] is pressed, it updates the FP poly.
+  * Survey (Grid) - Remove return path between first and last point. #584
+  * The code is intact to render the line as a "light" "dashed" white line.
+
+  [ 2014-08-15  Michael Oborne  <meee146@gmail.com> ]
+  * msi drivers
+  * flightplanner: add ability to load custom commands
+  * mainv2: add lang debug
+  * currentstate: add toh and inverse geofence status check
+
+  [ 2014-08-15  tristannovak  <tristan@gpssoilsampling.com> ]
+  * Survey (Grid) Move DO_SET_CAM_TRIGG_DIST to after the first waypoint.
+  * Part of Issue: #579.
+
+  * Also noticed when in Imperial mode, the altitude set by GRID into waypoints 
+
+  [ 2014-08-14  tristannovak  <tristan@gpssoilsampling.com> ]
+  * Survey (Grid) Auto change units (Imperial)
+  * Stats show most reasonable unit. Area: ft^2->Acres->miles^2  Distance: ft->m
+
+  [ 2014-08-13  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #569 from tristannovak/master
+  * Survey (Grid) Zoom with a trackbar + Left mouse PAN
+
+  [ 2014-08-13  tristannovak  <tristan@gpssoilsampling.com> ]
+  * Survey (Grid) Fix Border and Footprint Colors
+  * Some complained that they were all yellow, I don't think it was meant to be 
+  * Survey (Grid) Add Left mouse button PAN
+  * Some are used to using left botton for the rest of MP.
+
+  [ 2014-08-12  tristannovak  <tristan@gpssoilsampling.com> ]
+  * Survey (Grid) Zoom trackbar
+
+  [ 2014-08-11  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #565 from tristannovak/master
+  * Survey (Grid) Imperial Support, + random clean-up. Issue: #541
+
+  [ 2014-08-11  tristannovak  <tristan@gpssoilsampling.com> ]
+  * Survey (Grid) Imperial Support, + random clean-up.
+  * Still have to set altitude in meters, although it will add WP's in feet.
+  * Survey (Grid) Add Delay at waypoints, and heading hold options. Also consoli
+  * Options are for copters, will change soon so they only show for copters.
+  * Survey (Grid) Added use speed set in grid on the mission. Moved "Accept" btn
+  * Needs updated to set speed back without reset.
+
+  [ 2014-08-10  Michael Oborne  <meee146@gmail.com> ]
+  * spline: update first spline point to match actual
+  * gridv2: mod color
+  * DFLog: add extra df ERR messages
+  * speech: add armed check to low alt, and low airspeed warnings
+
+  [ 2014-08-10  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #561 from tristannovak/master
+  * Survey (Grid) V1 Updates
+
+  [ 2014-08-10  tristannovak  <tristan@gpssoilsampling.com> ]
+  * Merge branch 'master' of http://github.com/diydrones/MissionPlanner
+  * Changed "Survey (Grid)" plug-in. Added RTL option in UI. Also saves/loads ca
+  * LAND isn't always ideal. Easy to forget to change trigger type everytime.
+
+  [ 2014-08-10  Michael Oborne  <meee146@gmail.com> ]
+  * gridv2 changes
+
+  [ 2014-08-09  Michael Oborne  <meee146@gmail.com> ]
+  * heli: add heli icon on map.
+  * magcalib: fix comments
+  * simulation: stop exception on not connected
+  * paramtree: add node expansion
+  * stkv2: fix posible overflow
+  * radioinput: use rcmap for display.
+
+  [ 2014-08-07  Michael Oborne  <meee146@gmail.com> ]
+  * paramtreeview: fix spacing
+
+  [ 2014-08-06  Michael Oborne  <meee146@gmail.com> ]
+  * currentstate: add monitoring of geofence,ahrs and terrain problems
+  * flightplanner: remove terrain_check on wp upload (now done by ap)
+
+  [ 2014-08-06  Michael Oborne  <mich146@hotmail.com> ]
+  * terrainfollow: add exception protection and logging
+  * terrain: fix east north mixup
+  * use new gps_offset method in TerrainFollow
+  * fix build refrences
+
+  [ 2014-08-06  Michael Oborne  <meee146@gmail.com> ]
+  * tweak networklink kml
+
+  [ 2014-08-05  Michael Oborne  <meee146@gmail.com> ]
+  * terrainfollow: unsubscribe on destroy and dont send 0 alts
+  * update jsbsim.exe
+  * currentstate: improve ch3 % calc
+  * quickview: add number formating
+  * gridv2: use min and max alt from file
+
+  [ 2014-08-04  Michael Oborne  <meee146@gmail.com> ]
+  * fix build
+  * magcalib: reduce number of points required.
+  * enable nuget package restore on build
+  * httpserver: update generated kml of flightpath
+  * appconfig: remove some network tracing
+  * flightplanner: add terrain alt frame type
+
+  [ 2014-08-03  Michael Oborne  <meee146@gmail.com> ]
+  * gmapmarkerairport: fix overflow
+  * fix response
+  * paramcompare: add ability to use a callback
+  * mavlink: add locking on getwp
+  * rawparamtree: initial trial
+  * flightplanner: fix null exception
+  * commportserial: add exception logging
+
+  [ 2014-08-01  Michael Oborne  <meee146@gmail.com> ]
+  * clean error exit on failed connect.
+  * modify exception type to timeoutexception
+  * make sure canceled box closes
+  * fix bluetooth "element not found"
+
+  [ 2014-08-01  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #549 from virtualrobotix/for_merge
+  * For merge
+
+  [ 2014-08-01  LukeMike  <luca.micheletti.laser@gmail.com> ]
+  * VRBRAIN: Added VRX/VRBRAIN into list of boards for connect the terminal
+  * VRBRAIN: Added preset of battery monitor for VR Brain and VR Micro Brain 5
+
+  [ 2014-07-31  Michael Oborne  <meee146@gmail.com> ]
+  * add FP null checks
+  * add terrain status to currentstate
+  * fix dual mag message on change
+  * fix updateClearRouteMarker
+  * add gmap external dependancys
+  * delete redundant file
+  * fix a cross thread call
+  * cleanup python engine after run
+
+  [ 2014-07-31  Ellis Su  <ellissu@gmail.com> ]
+  * update Traditional Chinese translation
+
+  [ 2014-07-30  Michael Oborne  <meee146@gmail.com> ]
+  * fix udp serial issues
+
+  [ 2014-07-29  Michael Oborne  <meee146@gmail.com> ]
+  * udpserial. ensure the old client is closed.
+  * progressreporter. if we cancel something, dont show the dialog
+
+  [ 2014-07-29  hazyhxj  <hazyhxj@gmail.com> ]
+  * Update SC Translation
+  * 3DRRadio\Config, Rssi, Terminal
+  * Controls\ConnectionStats, DefaultSettings, ThemeColors, ConfigAC_Fence,
+  * InitialSetup
+  * SerialOutputPass
+
+  [ 2014-07-29  Ellis Su  <ellissu@gmail.com> ]
+  * update Traditional Chinese translation
+
+  [ 2014-07-29  EllisSu  <ellissu@gmail.com> ]
+  * update Traditional Chinese translation
+
+  [ 2014-07-29  Ellis Su  <ellissu@gmail.com> ]
+  * update for Traditional Chinese translation
+
+  [ 2014-07-29  Michael Oborne  <meee146@gmail.com> ]
+  * remove airport.dat and usage
+  * open up udpconnections
+  * add terraincheck on wp upload, and spacing out the send grid
+
+  [ 2014-07-28  Michael Oborne  <meee146@gmail.com> ]
+  * fix lat lon used in sendgrid to be the requested.
+  * include shorts in tlog to csv conversion
+  * fix terrain conversion
+  * add beta terrainfollow uploads
+  * rename label on compassmot screen
+  * clip srtm
+
+  [ 2014-07-27  Michael Oborne  <meee146@gmail.com> ]
+  * add mirrorstream write access option
+  * fix exception in fontgen
+  * fix exceptions on connect to ardutracker
+  * add new location_offset to pointlatlngalt
+  * add option to stop/start adsb
+  * fix gmaps web cache
+  * quickview speed tweak
+
+  [ 2014-07-25  Michael Oborne  <meee146@gmail.com> ]
+  * update mavlink
+  * add githash support
+  * bring back gauges
+  * add mapbox nofly zone
+  * fix motor test text
+
+  [ 2014-07-23  Michael Oborne  <meee146@gmail.com> ]
+  * add protogen - for protobuffer
+  * try release joystick more
+  * project file mod
+  * misc testing
+  * dont touch dtr on no reset
+
+  [ 2014-07-21  Michael Oborne  <meee146@gmail.com> ]
+  * add protobuf tests
+  * droneapi updates
+  * add text grid fit to hud
+  * add fontgen
+  * add watts
+
+  [ 2014-07-18  Michael Oborne  <meee146@gmail.com> ]
+  * close selectform on main log window close
+  * add antenna tracker exception
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * add firmware type to stats
+  * identify bootloader
+
+  [ 2014-07-18  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #529 from MPHant/master
+  * add for Traditional Chinese
+
+  [ 2014-07-18  Ellis Su  <ellissu@gmail.com> ]
+  * add for Traditional Chinese
+
+  [ 2014-07-17  Michael Oborne  <meee146@gmail.com> ]
+  * update upload failure message
+  * update set tracker here to use srtm alt.
+
+  [ 2014-07-16  Michael Oborne  <meee146@gmail.com> ]
+  * add imax to pid link check for AC
+  * change manual to loiter on action tab
+  * check p,i,d for arducopter pid link
+  * update for speech engine during logmap creation
+  * update sonar types to use autodoc
+
+  [ 2014-07-14  Michael Oborne  <meee146@gmail.com> ]
+  * add elevation graph null check
+  * add exception handle on motor test
+  * turn off overflow checking in gmaps
+  * add null checks to POIs
+
+  [ 2014-07-13  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #518 from virtualrobotix/for_merge
+  * LOGS BROWSER: Added interactivity between map, graph chart and data grid
+
+  [ 2014-07-13  Michael Oborne  <meee146@gmail.com> ]
+  * fix timeinair bug #521
+  * Mission Planner 1.3.7
+  * fix compass2 magcalib
+
+  [ 2014-07-12  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.6
+  * add tcpconsole startup on mp load
+
+  [ 2014-07-10  Michael Oborne  <meee146@gmail.com> ]
+  * magcalib - make sure cancel doestn save compass2 offsets
+  * fix logindex
+  * update changelog
+  * fix negative colour values on sphere
+  * add new MAV_CMD_PREFLIGHT_SET_SENSOR_OFFSETS
+  * fix mag calib when only one mag exists
+  * add landed to status
+  * add saving second compass values
+  * add droneshare guid's for ap type
+
+  [ 2014-07-10  LukeMike  <luca.micheletti.laser@gmail.com> ]
+  * LOGS BROWSER: Added interactivity between map, graph chart and data grid
+
+  [ 2014-07-09  Michael Oborne  <meee146@gmail.com> ]
+  * add internal wp's to simple grid
+  * add gps2 info
+  * remember last wpfile loaded
+  * add logsort logging
+  * skip accel calib on rover in wizard
+  * add batt fs options for copter
+  * fix antenna tracker alt.
+  * fix log analyser on non bins
+  * add red area to airports
+  * update gridv2 - slider
+
+  [ 2014-07-08  Michael Oborne  <meee146@gmail.com> ]
+  * change point camera here to use ROI
+  * undo zedgraph fix, as it breaks others
+  * fix hil issues
+
+  [ 2014-07-07  Michael Oborne  <meee146@gmail.com> ]
+  * change motor number to letters
+  * fix joystick compile error
+  * add mapbox test map
+
+  [ 2014-07-06  jasells  <joshua.sells@gmail.com> ]
+  * impl of Joystick dispose Joystick dispose() pattern impl
+
+  [ 2014-07-06  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #509 from FenomPL/master
+  * Fix for non DTR, RTS bluetooth radios
+
+  [ 2014-07-06  Michael Oborne  <meee146@gmail.com> ]
+  * fix pid sync if the differ from the start
+
+  [ 2014-07-05  Michael Oborne  <meee146@gmail.com> ]
+  * droneshare to https
+
+  [ 2014-07-04  FenomPL  <boston2000@poczta.onet.pl> ]
+  * Fix for non DTR, RTS bluetooth radios
+  * Currently connection via DTR, RTS disabled BT modules is almost
+  * impossible. This is happening due to resetting DTR line which makes the
+  * connection impossible on some modules.
+
+  * To use this fix please also add following line to your config.xml:
+  * <CHK_resetapmonconnect>false</CHK_resetapmonconnect>
+
+  [ 2014-07-03  Michael Oborne  <mich146@hotmail.com> ]
+  * prep for dual mag calib
+  * create log dir on startup
+  * prep new battery sensor
+  * remove elevation graph limit
+
+  [ 2014-06-29  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #500 from virtualrobotix/for_merge
+  * Added filter *.vrx for to find VirtualRobotix's firmwares from "Load custom 
+
+  [ 2014-06-26  LukeMike  <luca.micheletti.laser@gmail.com> ]
+  * Merge branch 'for_merge' of https://github.com/virtualrobotix/MissionPlanner
+  * Added filter *.vrx for to find VirtualRobotix's firmwares from "Load custom 
+
+  [ 2014-06-24  Michael Oborne  <meee146@gmail.com> ]
+  * add debugging
+
+  [ 2014-06-24  Michael Oborne  <mich146@hotmail.com> ]
+  * add spline circle add connect logging
+
+  [ 2014-06-21  Michael Oborne  <mich146@hotmail.com> ]
+  * mavlink update for randy
+
+  [ 2014-06-19  LukeMike  <luca.micheletti.laser@gmail.com> ]
+  * Added filter *.vrx for to find VirtualRobotix's firmwares from "Load custom 
+
+  [ 2014-06-17  Michael Oborne  <meee146@gmail.com> ]
+  * missed aw sdk
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * update elevation graph to use srtm aswell.
+
+  [ 2014-06-16  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #499 from virtualrobotix/for_merge
+  * For merge
+
+  [ 2014-06-16  LukeMike  <luca.micheletti.laser@gmail.com> ]
+  * Added drivers for VirtualRobotix boards
+
+  [ 2014-06-16  Michael Oborne  <meee146@gmail.com> ]
+  * remove old s3 support
+  * Survey Gridv2 first commit
+
+  [ 2014-06-16  LukeMike  <luca.micheletti.laser@gmail.com> ]
+  * Added detection of VR Micro Brain and downloading and updating its firmware
+
+  [ 2014-06-16  Michael Oborne  <meee146@gmail.com> ]
+  * logindex update
+  * missing resx's
+  * Update logmap, and create logindex interface
+  * remove airport spam message
+  * fix for ecc googlemaps
+  * update gmaps versions
+  * gmaps update
+
+  [ 2014-06-15  Michael Oborne  <meee146@gmail.com> ]
+  * fix missing file
+  * tweaks
+  * update magcalib sphere
+  * update droneshare intergration
+  * fix utils package list
+  * add maplog generation.
+  * zedgraph zoom fix
+
+  [ 2014-06-14  Michael Oborne  <meee146@gmail.com> ]
+  * support upload .logs to droneshare
+
+  [ 2014-06-13  Michael Oborne  <meee146@gmail.com> ]
+  * droneshare update
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * add .bin support to loganalyser
+
+  [ 2014-06-12  Michael Oborne  <meee146@gmail.com> ]
+  * add gimbalpoint - wip
+
+  [ 2014-06-12  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #496 from bys1123/master
+  * fix a Chinese translation issue
+
+  [ 2014-06-12  bys1123  <bys_1123@163.com> ]
+  * Update FlightData.zh-Hans.resx
+  * 清楚追踪 to 清除追踪
+  * Merge pull request #2 from diydrones/master
+  * update to lasted
+
+  [ 2014-06-12  Michael Oborne  <meee146@gmail.com> ]
+  * encryption mods
+  * add gimbal point to status list
+
+  [ 2014-06-11  Michael Oborne  <meee146@gmail.com> ]
+  * Update POI to lib
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner.git
+  * add MOUNT_STATUS to status in FD
+  * add initial droneshare library
+  * add getmountstatus polling
+  * use srtm for verify alt.
+  * fix camera gimbal pan max's
+
+  [ 2014-06-09  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #489 from wjax/master
+  * GeoTag GPS Time converter fix
+
+  [ 2014-06-08  Jesus  <wjaxxx@gmail.com> ]
+  * GeoTag GPS Time converter fix
+  * Fixes LEAP seconds not being added
+  * Fixes LEAP seconds not being 25 but 16 against UTC
+  * Fixes Converted Time being local time instead of UTC
+
+  [ 2014-06-08  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #488 from wjax/master
+  * GeoTag CultureInvariant Parse fix
+
+  [ 2014-06-08  Jesus  <wjaxxx@gmail.com> ]
+  * GeoTag CultureInvariant Parse fix
+  * Fixes errors in floats and doubles parsers due to different cultures.
+
+  [ 2014-06-05  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #482 from wjax/master
+  * GeTagTool Improvements (add shutter lag) and fixes
+
+  [ 2014-06-05  Michael Oborne  <meee146@gmail.com> ]
+  * update flightplanner command display
+  * update mavlink
+  * add shp to poly reprojection support
+  * add shp to poly file converter
+  * tweak udp reader to better support split packets
+  * change frame type to use enum
+
+  [ 2014-06-01  Michael Oborne  <meee146@gmail.com> ]
+  * opengltest tweaks
+  * add some logging
+
+  [ 2014-05-30  Michael Oborne  <meee146@gmail.com> ]
+  * modify px4firmware upload wait.
+  * Add POI to flightdata
+
+  [ 2014-05-30  Jesus  <wjaxxx@gmail.com> ]
+  * GeTagTool Improvements (add shutter lag) and fixes
+  * Fixed possible OutOfRange situation with log offset counts
+  * Fixed situation where a not found GPS Msg stoppped the Offset Process.
+  * It now continues ignoring that picture
+  * Added shutter lag compensation option
+  * Improved Log Messages readability
+
+  [ 2014-05-29  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #479 from bys1123/master
+  * fix two chinese translation problems
+
+  [ 2014-05-29  Michael Oborne  <meee146@gmail.com> ]
+  * modify otp failure types
+
+  [ 2014-05-28  bys1123  <bys_1123@163.com> ]
+  * Update FlightPlanner.zh-Hans.resx
+  * 验证身高 to 验证海拔
+  * Update FlightPlanner.zh-Hans.resx
+  * 高度（ABS） to 绝对高度
+  * Merge pull request #1 from diydrones/master
+  * to 1.3.5
+
+  [ 2014-05-28  Michael Oborne  <meee146@gmail.com> ]
+  * changenotes
+  * commsfile speedup
+  * mag calib outliers
+
+  [ 2014-05-27  Michael Oborne  <meee146@gmail.com> ]
+  * fix magcalib
+
+  [ 2014-05-26  Michael Oborne  <mich146@hotmail.com> ]
+  * fix
+  * enable flow control on commsfile
+  * magcalib sign change
+
+  [ 2014-05-26  Michael Oborne  <meee146@gmail.com> ]
+  * add magcalib bypass
+
+  [ 2014-05-25  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.4
+  * fix magcalib center point sign (+ to -)
+  * update kml export to include flat spline.
+  * tweak sphere internals
+  * add flow rate to commsfile
+  * add docking remember, expose fullpointlist
+  * fix digital airspeed pin
+
+  [ 2014-05-24  Michael Oborne  <meee146@gmail.com> ]
+  * magcalib - adjust centerpoint on sphere/check based on best guess
+
+  [ 2014-05-23  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.3
+  * more airport filters and mouseover ap names
+  * add splinemode in wp add
+  * more airport filtering
+  * cleanup airport display
+  * fix adsb exception
+  * modify airports
+  * update fw history
+  * add spline wp to right click FP menu
+
+  [ 2014-05-22  Michael Oborne  <meee146@gmail.com> ]
+  * fix log filter exception on filter change
+  * fix georef exception
+  * move airports to bg loading
+  * tidy up unused variables
+  * add a readonly mode
+  * update for release 1.3.2
+  * rearrange dataflash log icons.
+  * update readme for mono
+  * add more notes to motor test screen
+  * fix rally point alt conversion
+  * update threadsafe in airport loading
+  * update delay before connect
+
+  [ 2014-05-21  Michael Oborne  <meee146@gmail.com> ]
+  * patch for guided mode update. may change again
+  * update posible baudrates
+  * add dist and voltage to sonar enable screen
+
+  [ 2014-05-20  Michael Oborne  <meee146@gmail.com> ]
+  * add magcalib high offset check.
+
+  [ 2014-05-19  Michael Oborne  <meee146@gmail.com> ]
+  * Motor test update
+  * make srtm class disposable
+  * Tweak airports loading
+
+  [ 2014-05-17  Michael Oborne  <meee146@gmail.com> ]
+  * add exception handlers
+  * fix github failed dl exception
+
+  [ 2014-05-16  Michael Oborne  <meee146@gmail.com> ]
+  * move load airports to show during the splash screen
+  * tweak mag calib settings
+
+  [ 2014-05-15  Michael Oborne  <meee146@gmail.com> ]
+  * add airport 3nm ring
+
+  [ 2014-05-14  Michael Oborne  <meee146@gmail.com> ]
+  * uploader fix
+  * update px4uploader comments
+  * vrbrain update
+  * cleanup bouncycastle
+
+  [ 2014-05-12  Michael Oborne  <mich146@hotmail.com> ]
+  * remove .gitattributes as it breaks things
+  * Merge pull request #453 from wjax/master
+  * Images GeoRef Tool Update (CAM Msg + CleanUp)
+
+  [ 2014-05-12  Michael Oborne  <meee146@gmail.com> ]
+  * add clear logs verify
+  * tweak airport locations
+  * reduce mag calib point count requirement
+  * fix reset to defaults
+  * increase sphere point size
+
+  [ 2014-05-09  Michael Oborne  <mich146@hotmail.com> ]
+  * update Readme.txt
+
+  [ 2014-05-08  Jesus  <wjaxxx@gmail.com> ]
+  * Images GeoRef Tool Update (CAM Msg + CleanUp)
+  * Added CAM messages as georef source for images
+  * Clean Up of code and addition of classes for easy future upgrades
+  * Added subfolder creation for geotagged images
+
+  [ 2014-05-08  Michael Oborne  <mich146@hotmail.com> ]
+  * Cleanup binarys
+  * update .gitattributes
+  * fix dependancys
+
+  [ 2014-05-06  Michael Oborne  <mich146@hotmail.com> ]
+  * cleanup dependancys - more nuget packages
+
+  [ 2014-05-04  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #444 from Bravojul/fix-airports
+  * Fix airports
+  * line endings
+
+  [ 2014-05-04  Bravojul  <Bravojul@users.noreply.github.com> ]
+  * Fix Ourairports parsing routine (2)
+  * Fix commented out code too
+  * Fix Ourairports parsing routine
+  * double parsing needs Invariant culture
+  * Names split when a comma is in the name, regardless of double quotes
+
+  [ 2014-05-01  Michael Oborne  <meee146@gmail.com> ]
+  * px4uploader xml file intergration
+  * OTP update
+
+  [ 2014-04-30  Michael Oborne  <meee146@gmail.com> ]
+  * clickonce updates
+  * px4uploader tidy warnings
+  * initial motor test work
+
+  [ 2014-04-29  Michael Oborne  <meee146@gmail.com> ]
+  * add reset params to defaults
+  * update mavlink specs
+  * fix log unfilter bug
+  * Fix type in basic tuning
+  * cleanup
+  * update gitattributes
+  * Add px4uploader
+  * move RP_feel back to top of simple pids
+  * Change Nmea output to use alt ASL
+
+  [ 2014-04-28  Michael Oborne  <meee146@gmail.com> ]
+  * fix bad mode in binary log conversion
+  * fix logbrowse filter
+  * Add new Airports function
+
+  [ 2014-04-27  Michael Oborne  <meee146@gmail.com> ]
+  * Update georef format
+  * tweak mavlink log download status
+  * allow revert of switch docking on FP screen
+  * Update ClickOnce
+
+  [ 2014-04-26  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.3.1 add test flight planner dock switch add more error han
+  * fix mavlink log unhandled exception
+  * add better UTM coord entry error handeling
+  * fix imagelabel exception
+  * update .gitattributes
+  * Code analysis tweaks.
+  * improve WP upload handeling.
+  * fix null reference in speech engine
+  * Switch order of roll/pitch sensitivity
+
+  [ 2014-04-25  Michael Oborne  <meee146@gmail.com> ]
+  * project file update
+  * fix possible 3dr radio config issue
+  * remove redundant file
+  * fix issue #423
+  * update readme
+  * fix issue #426
+
+  [ 2014-04-24  Michael Oborne  <meee146@gmail.com> ]
+  * fix issue #424
+  * test vs 2013 intergration
+  * add exception logging on raw param screen.
+
+  [ 2014-04-23  Michael Oborne  <meee146@gmail.com> ]
+  * 3drradio adjust some command timings/wait
+  * fix pluginloader exception on start when plugin dir doesnt exist
+  * fix getparam bug
+  * add posible socket cleanup issue with adsb on mono
+  * add more hud error logging
+
+  [ 2014-04-22  Michael Oborne  <meee146@gmail.com> ]
+  * .gitignore update 3
+  * .gitignore update 2
+  * .gitignore update
+  * misc
+  * remove redundant script code from simple mode
+  * better wp upload error handeling.
+  * update script engine and examples
+  * remove packages
+  * add explicit otp check
+  * add board voltages to currentstate
+  * remove old folders
+
+  [ 2014-04-21  Michael Oborne  <meee146@gmail.com> ]
+  * cleanup packages
+  * Mission Planner 1.3.0 add MAVLinkSerialPort (serial tunnel) add spline suppo
+  * add missing
+  * fix hint paths
+  * Mission Planner 1.2.99.1 add MAVLinkSerialPort (serial tunnel) add spline su
+
+  [ 2014-04-17  Michael Oborne  <mich146@hotmail.com> ]
+  * Merge pull request #411 from mtrl/master
+  * Removed extra slash in URI link to ChangeLog.txt from upgrade message
+
+  [ 2014-04-17  Mark Williams  <m.williams@contentbloom.com> ]
+  * Removed extra slash in URI link to ChangeLog.txt from upgrade message
+
+  [ 2014-03-25  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.99 fix error in selection in default settings update ftd
+
+  [ 2014-03-15  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.98 update default settings to refresh tab on use add add
+
+  [ 2014-02-28  meee1  <mich146@hotmail.com> ]
+  * Merge pull request #358 from rh-galaxy/mag_calib_verification
+  * Compass calibration quality check
+
+  [ 2014-02-27  Ronnie Hedlund  <huj56745@gmail.com> ]
+  * Added a quality verification of the manual compass calibration.
+
+  [ 2014-02-23  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.97 change log browse to virtualmode. much faster on wind
+
+  [ 2014-02-22  Michael Oborne  <meee146@gmail.com> ]
+  * quick tweak
+
+  [ 2014-02-21  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.96 add ability to change text on buttons in servo tab mo
+
+  [ 2014-02-21  meee1  <mich146@hotmail.com> ]
+  * Merge pull request #350 from rh-galaxy/custom_firmware_directory
+  * custom firmware file dialog path saved
+
+  [ 2014-02-20  Ronnie Hedlund  <huj56745@gmail.com> ]
+  * save path for custom firmware file dialog between runs
+
+  [ 2014-02-06  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.95 move Advanced view to a higher function modify georef
+
+  [ 2014-02-04  Michael Oborne  <meee146@gmail.com> ]
+  * add reactive dlls
+  * missing files
+
+  [ 2014-02-03  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.94 add default settings fix battery show on hud add new 
+
+  [ 2014-01-21  Michael Oborne  <meee146@gmail.com> ]
+  * tidy up
+
+  [ 2014-01-21  Ronnie Hedlund  <huj56745@gmail.com> ]
+  * fix wizard back/next issues with acc calibration
+
+  [ 2014-01-19  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.93 add ERR to DF log add treeview to log browser (will b
+
+  [ 2013-12-29  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.92 sort saved param list wizard tweaks remove FS_GPS_ENA
+
+  [ 2013-12-25  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.91 fix non standard frame type add DF log download over 
+
+  [ 2013-12-20  Michael Oborne  <meee146@gmail.com> ]
+  * update csproj hints
+
+  [ 2013-12-18  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.90 new df over mavlink fix grid advanced button remove a
+
+  [ 2013-12-15  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.89 fix kml/gpx creation log browser mod df log renaming 
+
+  [ 2013-12-03  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.88 add movingbase display - using nmea gps tweak wizard 
+
+  [ 2013-11-23  meee1  <mich146@hotmail.com> ]
+  * Merge pull request #238 from johnath/patch-1
+  * Update Program.cs
+
+  [ 2013-11-23  Johnathan Nightingale  <johnath@johnath.com> ]
+  * Update Program.cs
+  * Fix typos in error report connectivity message
+
+  [ 2013-11-22  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.87 add asratio change load iris defaults to use compare 
+
+  [ 2013-11-06  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.86 spline display support doublebuffer quick view move h
+
+  [ 2013-10-28  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.85 update map library - this will invalidate your map pr
+
+  [ 2013-10-23  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.84 add new winddir fix px4 uploader same fw error update
+
+  [ 2013-10-17  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.83.x add new winddir
+  * * Mission Planner 1.2.83
+  * add log sorting
+  * add password protected config
+  * add pan and remove from log browse
+  * fix terminal multiple connect clicks
+  * fix set home alt button to switch between asl and agl
+  * add more options to failsafe screen
+  * add password support to inputbox
+  * fix posible gmap 404 error
+  * add px4flow driver to msi
+
+  [ 2013-10-12  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.82 address .net update/issues add DO_SET_CAM_TRIGG_DIST 
+
+  [ 2013-10-10  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.81 fix guage exception change mybutton colours back add 
+
+  [ 2013-09-26  Michael Oborne  <meee146@gmail.com> ]
+  * fix issue 174
+
+  [ 2013-09-25  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.80 exception fixs fix mono menu bar color fix wizard con
+  * mavlink generator code
+
+  [ 2013-09-22  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.79 dpinst tweaks enable doublebuffer on coords display f
+
+  [ 2013-09-13  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.78 fix stacked windows
+
+  [ 2013-09-12  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.77 fix log download modify custommessagebox to start cen
+
+  [ 2013-09-09  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.76 fix arducopter pid screen when locals is using , vs .
+
+  [ 2013-09-07  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.75 speed tuning. fix ch3out when not connected fix dont 
+
+  [ 2013-09-05  Michael Oborne  <meee146@gmail.com> ]
+  * add COPYING.txt
+
+  [ 2013-08-31  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.74 more Grid/Survey WIP fix close issue on mono implemen
+
+  [ 2013-08-27  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.73 remove DO_SET_PARAMETER - has never worked add connec
+
+  [ 2013-08-24  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.72 menu structure change.  since it missed .71 support n
+
+  [ 2013-08-23  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.71 update wizard accel images to iris ensure wizard mag 
+
+  [ 2013-08-17  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.70 add larger deadzone on map interface. convert Measure
+
+  [ 2013-08-13  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.69 add png support to direct image injection add analyti
+
+  [ 2013-08-11  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.68 add vario support. add better wms support, as per kog
+
+  [ 2013-08-08  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.67 add firmware screen back to initial config fix georeg
+
+  [ 2013-08-04  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.66 relocate serial/tcp/udp comms to external dll try fix
+
+  [ 2013-08-03  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.65 custom firmware load fix refresh on disconnect px4fmu
+
+  [ 2013-08-01  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.63 relocate controls to external dll change mp icon add 
+
+  [ 2013-07-24  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.62 fix hud revert fw history mod plane accell calib fix 
+
+  [ 2013-07-21  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.61 Wizard WIP relocate native methods add support for ru
+
+  [ 2013-07-12  Michael Oborne  <meee146@gmail.com> ]
+  * make it compile
+
+  [ 2013-07-11  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.60 More Wizard (excluded atm - wip) add altasl to status
+
+  [ 2013-07-04  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.59 fix terminal exception add back loiter_unlim to copte
+
+  [ 2013-07-01  Michael Oborne  <meee146@gmail.com> ]
+  * additional dll's
+  * Mission Planner 1.2.58 add more python internal support - guided mode/wp's r
+
+  [ 2013-06-27  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.57 fix small screen res fix cli add more python script a
+
+  [ 2013-06-25  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.56 fix param list memory usage generate mode list to par
+
+  [ 2013-06-22  Michael Oborne  <meee146@gmail.com> ]
+  * add missing files
+  * * Mission Planner 1.2.54 add new AC pids modify theme update 3dr radio for n
+
+  [ 2013-06-10  Michael Oborne  <mich146@hotmail.com> ]
+  * wizard prep
+
+  [ 2013-06-05  Michael Oborne  <mich146@hotmail.com> ]
+  * mods while at 3dr
+
+  [ 2013-05-29  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.53 confirm nmea line endings fix timeinair reset on conn
+
+  [ 2013-05-25  Michael Oborne  <meee146@gmail.com> ]
+  * add build instructions
+
+  [ 2013-05-22  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.52 revert to vfr_hud.alt add prearm warning text
+
+  [ 2013-05-20  Michael Oborne  <meee146@gmail.com> ]
+  * * Mission Planner 1.2.51 update hil add missing baud rates NMEA output milli
+
+  [ 2013-05-09  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.50 fix AR modes on hud add binary log fw ap id fix kml g
+
+  [ 2013-05-08  Michael Oborne  <meee146@gmail.com> ]
+  * Merge branch 'master' of https://github.com/diydrones/MissionPlanner
+  * Conflicts:
+  * 	georefimage.cs
+  * Mission Planner 1.2.49 change update location update georefpage add compass 
+
+  [ 2013-05-01  meee1  <mich146@hotmail.com> ]
+  * Merge pull request #34 from arthurbenemann/georef2
+  * Fix georeference code
+
+  [ 2013-04-30  Arthur Benemann  <arthur.benemann@gmail.com> ]
+  * Disable SignAssembly in a couple of files so it's easier to compile.
+  * Use right fields for georeferencing pictures.
+  * Uses the GPS alt as the georeference altitude.
+
+  [ 2013-04-29  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.48 modify accel calib mono ssl fix add ch6_ dec better a
+
+  [ 2013-04-26  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.47 add RPY to nmea output as $GPRPY update current state
+
+  [ 2013-04-24  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.46 add binary log support add new self describing log fo
+
+  [ 2013-04-19  meee1  <mich146@hotmail.com> ]
+  * Merge pull request #30 from tridge/master
+  * update rover and plane flashlog XML
+
+  [ 2013-04-19  Andrew Tridgell  <tridge@samba.org> ]
+  * DataFlash: updated flash messages for plane and rover
+
+  [ 2013-04-18  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.45 px4 inf mod firmware screen mod beta fw now from firm
+
+  [ 2013-04-14  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.44 disable dtr on connect px4 uploader mods px4 upload p
+
+  [ 2013-04-11  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.43 fix advanced param issue. mod px4 driver allow multip
+
+  [ 2013-04-09  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.42 swarm mods AR2 pid update SITL sim mods
+
+  [ 2013-04-04  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.41 fix swarming grid add mavlink tcp passthough
+  * Mission Planner 1.2.40 fix mono start fix trap frame definition
+
+  [ 2013-04-03  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.39 px4 detection mod .net 3.5 > 4.0 add new frame type a
+
+  [ 2013-04-01  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.38 fix updater
+  * px4uploader
+  * pfx's
+  * External Librarys
+
+  [ 2013-03-31  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.37 px4 detect - wont work until usb hang is fixed new bo
+
+  [ 2013-03-30  meee1  <mich146@hotmail.com> ]
+  * Merge pull request #20 from jjlin/contrib
+  * Make the project build from a fresh clone
+
+  [ 2013-03-30  Jeremy Lin  <jjlin@cs.stanford.edu> ]
+  * Make the project build from a fresh clone
+  * Also, some other minor cleanup.
+
+  * * Add HintPaths for all references.
+  * * Add missing version.exe needed for post-build event.
+  * * Ignore bin and obj directories.
+  * * Add executable permission for all executables.
+
+  [ 2013-03-16  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.36 add red gps status on hud when no gps lock disable ac
+
+  [ 2013-03-08  Michael Oborne  <meee146@gmail.com> ]
+  * MP code only add red gps status on hud when no gps lock disable accel calib 
+
+  [ 2013-02-12  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.35 attempt to fix crash on usb pulled unsafe add failsaf
+
+  [ 2013-02-07  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.34 update german lang thanks mike prep for multi mav rel
+
+  [ 2013-02-05  Michael Oborne  <meee146@gmail.com> ]
+  * Mission Planner 1.2.33
+
+  [ 2013-02-05  Andrew Tridgell  <tridge@samba.org> ]
+  * Initial commit
+
+ -- MAINTAINER <MissionPlanner@noreply.github.com>  Sun, 21 Feb 2016 11:38:27 +1000
