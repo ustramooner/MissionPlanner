@@ -1,6 +1,5 @@
 ﻿namespace MissionPlanner.Joystick
 {
-#if !noDIRECTX
     partial class Joy_ChangeMode
     {
         /// <summary>
@@ -56,6 +55,5 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboBox1;
-   }
-   #endif
+    }
 }

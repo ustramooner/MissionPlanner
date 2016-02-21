@@ -6,18 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using OpenTK.Input;
 using MissionPlanner.Controls;
 using MissionPlanner.Utilities;
-
-#if !noDIRECTX
-using Microsoft.DirectX.DirectInput;
-#endif
 
 
 namespace MissionPlanner.Joystick
 {
-#if !noDIRECTX
     public partial class JoystickSetup : Form
     {
         bool startup = true;
@@ -35,9 +29,9 @@ namespace MissionPlanner.Joystick
         {
             try
             {
-                DeviceList joysticklist = Joystick.getDevices();
+                IList<JoystickDevice> joysticklist = Joystick.getDevices();
 
-                foreach (DeviceInstance device in joysticklist)
+                foreach (JoystickDevice device in joysticklist)
                 {
                     CMB_joysticks.Items.Add(device.ProductName);
                 }
@@ -262,6 +256,9 @@ namespace MissionPlanner.Joystick
                     //Console.WriteLine(DateTime.Now.Millisecond + " end ");
                 }
             }
+            #if noDIRECTX
+
+            #else
             catch (InputLostException ex)
             {
                 ex.ToString();
@@ -270,6 +267,7 @@ namespace MissionPlanner.Joystick
                     BUT_enable_Click(null, null);
                 }
             }
+            #endif
             catch
             {
             }
@@ -318,9 +316,9 @@ namespace MissionPlanner.Joystick
         {
             CMB_joysticks.Items.Clear();
 
-            DeviceList joysticklist = Joystick.getDevices();
+            IList<JoystickDevice> joysticklist = Joystick.getDevices();
 
-            foreach (DeviceInstance device in joysticklist)
+            foreach (JoystickDevice device in joysticklist)
             {
                 CMB_joysticks.Items.Add(device.ProductName);
             }
@@ -642,5 +640,4 @@ namespace MissionPlanner.Joystick
                 MainV2.joystick.setReverse(8, ((CheckBox) sender).Checked);
         }
     }
-#endif
 }

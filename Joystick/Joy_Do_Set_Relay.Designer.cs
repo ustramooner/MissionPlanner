@@ -1,6 +1,5 @@
 ﻿namespace MissionPlanner.Joystick
 {
-#if !noDIRECTX
     partial class Joy_Do_Set_Relay
     {
         /// <summary>
@@ -75,6 +74,5 @@
 
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label1;
-   }
-   #endif
+    }
 }

@@ -10,8 +10,7 @@ using System.Windows.Forms;
 namespace MissionPlanner.Joystick
 {
     public partial class Joy_Button_axis : Form
-   {
-      #if !noDIRECTX
+    {
         public Joy_Button_axis(string name)
         {
             InitializeComponent();
@@ -43,6 +42,5 @@ namespace MissionPlanner.Joystick
 
             MainV2.joystick.setButton(int.Parse(this.Tag.ToString()), config);
         }
-#endif
     }
 }

@@ -8,12 +8,9 @@ using System.Threading;
 using System.Windows.Forms;
 using DirectShowLib;
 using MissionPlanner.Controls;
+using MissionPlanner.Joystick;
 using MissionPlanner.Utilities;
 using WebCamService;
-
-#if !noDIRECTX
-using MissionPlanner.Joystick;
-#endif
 
 namespace MissionPlanner.GCSViews.ConfigurationView
 {
@@ -446,11 +443,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void BUT_Joystick_Click(object sender, EventArgs e)
         {
-#if !noDIRECTX
             Form joy = new JoystickSetup();
             ThemeManager.ApplyThemeTo(joy);
             joy.Show();
-#endif
         }
 
         private void CMB_distunits_SelectedIndexChanged(object sender, EventArgs e)

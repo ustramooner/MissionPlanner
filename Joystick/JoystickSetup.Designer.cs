@@ -1,7 +1,6 @@
 ﻿using MissionPlanner.Controls;
 namespace MissionPlanner.Joystick
 {
-#if !noDIRECTX
     partial class JoystickSetup
     {
         /// <summary>
@@ -673,5 +672,4 @@ namespace MissionPlanner.Joystick
         private System.Windows.Forms.ComboBox CMB_CH8;
         private System.Windows.Forms.Label label14;
     }
-#endif
 }

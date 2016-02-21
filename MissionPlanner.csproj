@@ -2966,6 +2966,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Resources\Welcome_to_Michael_Oborne.rtf" />
+    <Compile Include="Joystick\JoystickDevice.cs" />
+    <Compile Include="Joystick\JoystickState.cs" />
+    <Compile Include="Joystick\JoystickCaps.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="acsimplepids.xml">

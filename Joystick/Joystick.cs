@@ -4,21 +4,15 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using log4net;
-//using OpenTK.Input;
 using System.Reflection;
 using System.IO;
 
-#if !noDIRECTX
-using Microsoft.DirectX.DirectInput;
-#endif
-
 namespace MissionPlanner.Joystick
 {
-   #if !noDIRECTX
     public class Joystick : IDisposable
-   {
+    {
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
-        Device joystick;
+        JoystickDevice joystick;
         JoystickState state;
         public bool enabled = false;
         byte[] buttonpressed = new byte[128];
@@ -183,8 +177,8 @@ namespace MissionPlanner.Joystick
             log.Info("Loading joystick config files " + joystickconfigbutton + " " + joystickconfigaxis);
 
             // save for later
-            this.joystickconfigbutton = Application11.StartupPath + Path.DirectorySeparatorChar + joystickconfigbutton;
-            this.joystickconfigaxis = Application11.StartupPath + Path.DirectorySeparatorChar + joystickconfigaxis;
+            this.joystickconfigbutton = MainV2.UserPath + Path.DirectorySeparatorChar + joystickconfigbutton;
+            this.joystickconfigaxis = MainV2.UserPath + Path.DirectorySeparatorChar + joystickconfigaxis;
 
             // load config
             if (File.Exists(joystickconfigbutton) && File.Exists(joystickconfigaxis))
@@ -244,31 +238,30 @@ namespace MissionPlanner.Joystick
         JoyChannel[] JoyChannels = new JoyChannel[9]; // we are base 1
         JoyButton[] JoyButtons = new JoyButton[128]; // base 0
 
-        public static DeviceList getDevices()
+        public static IList<JoystickDevice> getDevices()
         {
-            return Manager.GetDevices(DeviceClass.GameControl, EnumDevicesFlags.AttachedOnly);
+            return JoystickDevice.GetDevices();
         }
 
         public bool start(string name)
         {
             self.name = name;
-            DeviceList joysticklist = Manager.GetDevices(DeviceClass.GameControl, EnumDevicesFlags.AttachedOnly);
+            IList<JoystickDevice> joysticklist = getDevices();
 
             bool found = false;
 
-            foreach (DeviceInstance device in joysticklist)
+            foreach (JoystickDevice device in joysticklist)
             {
                 if (device.ProductName == name)
                 {
-                    joystick = new Device(device.InstanceGuid);
+                    this.joystick = device;
                     found = true;
                     break;
                 }
             }
             if (!found)
                 return false;
-
-            joystick.SetDataFormat(DeviceDataFormat.Joystick);
+            
 
             joystick.Acquire();
 
@@ -290,26 +283,24 @@ namespace MissionPlanner.Joystick
         public static joystickaxis getMovingAxis(string name, int threshold)
         {
             self.name = name;
-            DeviceList joysticklist = Manager.GetDevices(DeviceClass.GameControl, EnumDevicesFlags.AttachedOnly);
+            IList<JoystickDevice> joysticklist = JoystickDevice.GetDevices();
 
             bool found = false;
 
-            Device joystick = null;
+            JoystickDevice joystick = null;
 
-            foreach (DeviceInstance device in joysticklist)
+            foreach (JoystickDevice device in joysticklist)
             {
                 if (device.ProductName == name)
                 {
-                    joystick = new Device(device.InstanceGuid);
+                    joystick = device;
                     found = true;
                     break;
                 }
             }
             if (!found)
                 return joystickaxis.ARx;
-
-            joystick.SetDataFormat(DeviceDataFormat.Joystick);
-
+            
             joystick.Acquire();
 
             // CustomMessageBox.Show("Please ensure you have calibrated your joystick in Windows first");
@@ -412,25 +403,23 @@ namespace MissionPlanner.Joystick
         public static int getPressedButton(string name)
         {
             self.name = name;
-            DeviceList joysticklist = Manager.GetDevices(DeviceClass.GameControl, EnumDevicesFlags.AttachedOnly);
+            IList<JoystickDevice> joysticklist = JoystickDevice.GetDevices();
 
             bool found = false;
 
-            Device joystick = null;
+            JoystickDevice joystick = null;
 
-            foreach (DeviceInstance device in joysticklist)
+            foreach (JoystickDevice device in joysticklist)
             {
                 if (device.ProductName == name)
                 {
-                    joystick = new Device(device.InstanceGuid);
+                    joystick = device;
                     found = true;
                     break;
                 }
             }
             if (!found)
                 return -1;
-
-            joystick.SetDataFormat(DeviceDataFormat.Joystick);
 
             joystick.Acquire();
 
@@ -631,6 +620,9 @@ namespace MissionPlanner.Joystick
 
                     //Console.WriteLine("{0} {1} {2} {3}", MainV2.comPort.MAV.cs.rcoverridech1, MainV2.comPort.MAV.cs.rcoverridech2, MainV2.comPort.MAV.cs.rcoverridech3, MainV2.comPort.MAV.cs.rcoverridech4);
                 }
+                #if noDIRECTX
+
+                #else
                 catch (InputLostException ex)
                 {
                     log.Error(ex);
@@ -639,6 +631,7 @@ namespace MissionPlanner.Joystick
                         delegate { CustomMessageBox.Show("Lost Joystick", "Lost Joystick"); });
                     return;
                 }
+                #endif
                 catch (Exception ex)
                 {
                     log.Info("Joystick thread error " + ex.ToString());
@@ -1024,17 +1017,17 @@ namespace MissionPlanner.Joystick
 
         */
 
-        public Device AcquireJoystick(string name)
+        public JoystickDevice AcquireJoystick(string name)
         {
-            DeviceList joysticklist = Manager.GetDevices(DeviceClass.GameControl, EnumDevicesFlags.AttachedOnly);
+            IList<JoystickDevice> joysticklist = JoystickDevice.GetDevices();
 
             bool found = false;
 
-            foreach (DeviceInstance device in joysticklist)
+            foreach (JoystickDevice device in joysticklist)
             {
                 if (device.ProductName == name)
                 {
-                    joystick = new Device(device.InstanceGuid);
+                    joystick = device;
                     found = true;
                     break;
                 }
@@ -1042,9 +1035,7 @@ namespace MissionPlanner.Joystick
 
             if (!found)
                 return null;
-
-            joystick.SetDataFormat(DeviceDataFormat.Joystick);
-
+            
             joystick.Acquire();
 
             System.Threading.Thread.Sleep(500);
@@ -1439,6 +1430,5 @@ namespace MissionPlanner.Joystick
                 return min;
             return value;
         }
-   }
-   #endif
+    }
 }
