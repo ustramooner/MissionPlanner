@@ -1,4 +1,5 @@
 /debian/tmp
+/MAC/output
 *.pfx
 *.suo
 *.user
